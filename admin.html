@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="dashboard" />
+    <meta name="author" content="Abel Córdoba González" />
+    <meta name="keywords" content="crud, localstorage, dahsboard" />
+    <title>Luxor Dashboard</title>
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+    <!--Simple-DataTables Files  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"
+      type="text/javascript"
+    ></script>
+    <!-- sweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="
+          px-4
+          py-2
+          shadow
+          navbar navbar-expand-lg
+          bg-white
+          overflow-hidden
+        "
+      >
+        <i class="bx bx-menu" id="btn"></i>
+      </nav>
+    </header>
+    <main>
+      <div class="d-flex align-items-stretch">
+        <div class="sidebar py-3 ms-0 shrink show" id="sidebar">
+          <div class="logo-details">
+            <i class="bi bi-gem"></i>
+            <div class="logo_name">Luxor Joyas</div>
+          </div>
+          <ul class="nav-list ps-0">
+            <li>
+              <a
+                id="tooltip"
+                href="#"
+                 data-bs-toggle="tooltip"
+                 data-bs-placement="right"
+                 title="Inicio"
+                 animation="true"
+                >
+                <i class="bx bxs-home-smile"></i>
+                <span class="links_name">Inicio</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Dashboard"
+              >
+                <i class="bx bxs-dashboard"></i>
+                <span class="links_name">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Administradores"
+              >
+                <i class="bx bx-user"></i>
+                <span class="links_name">Administradores</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Clientes"
+              >
+                <i class="bx bxs-user-account"></i>
+                <span class="links_name">Clientes</span>
+              </a>
+              <span class="tooltip">Clientes</span>
+            </li>
+            <li>
+              <a
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Ordenes"
+              >
+                <i class="bx bx-cart-alt"></i>
+                <span class="links_name">Ordenes</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Gráficos"
+              >
+                <i class="bx bx-pie-chart-alt-2"></i>
+                <span class="links_name">Gráficos</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Archivos"
+              >
+                <i class="bx bx-folder"></i>
+                <span class="links_name">Archivos</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Guardados"
+              >
+                <i class="bx bx-heart"></i>
+                <span class="links_name">Guardados</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Configuración"
+              >
+                <i class="bx bx-cog"></i>
+                <span class="links_name">Configuración</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                title="Log Out"
+              >
+                <i class="bx bx-log-out" id="log_out"></i>
+                <span class="links_name">Log Out</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="col-md-10 col-sm-1 my-5">
+        <div>
+          <form class="my-5 p-3 bg-light" id="formProducto">
+            <h3>Cargar productos</h3>
+            <hr />
+            <div class="mb-3">
+              <label for="codigo" class="form-label">ID Producto</label>
+              <input
+                type="text"
+                class="form-control"
+                id="ID_producto"
+                aria-describedby="ID_producto"
+                placeholder="ID único"
+              />
+              <div class="invalid-feedback">Este campo es obligatorio</div>
+              <div class="valid-feedback">Este campo es correcto</div>
+            </div>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                aria-describedby="nombre"
+                placeholder="Mouse Logitec"
+              />
+              <div class="invalid-feedback">Este campo es obligatorio</div>
+            </div>
+            <div class="mb-3">
+              <label for="Precio" class="form-label">Precio</label>
+              <input
+                type="text"
+                class="form-control"
+                id="precio"
+                aria-describedby="precio"
+                placeholder="Precio del producto"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="Stock" class="form-label">Stock Disponible</label>
+              <input
+                type="number"
+                class="form-control"
+                id="stock"
+                placeholder="ej: 5"
+                aria-describedby="stock"
+              />
+              <div class="invalid-feedback">
+                Este campo es obligatorio y la cantidad de caracteres debe ser
+                entre 2 a 5
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="fecha_orden" class="form-label">Última Orden</label>
+              <input
+                type="date"
+                class="form-control"
+                id="fecha_orden"
+                aria-describedby="fecha_orden"
+                placeholder="AAAA/MM/DD"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <div
+              class="alert alert-danger mt-4 d-none"
+              role="alert"
+              id="msjAlerta"
+            >
+              Debe completar todos los datos
+            </div>
+          </form>
+        </div>
+        <h4 class="display-5 text-center">Productos</h4>
+        <hr />
+        <button class="btn btn-primary my4" id="btn-agregar">Agregar</button>
+        <div class="table-responsive">
+          <table
+            id="myTable"
+            class="
+              text-center
+              mb-0
+              table table-borderless table-hover table-light table-striped
+              w-100
+            "
+          >
+            <thead class="table-dark text-light">
+              <tr>
+                <th>ID PRODUCTO</th>
+                <th>NOMBRE</th>
+                <th>PRECIO</th>
+                <th>STOCK</th>
+                <th>ÚLTIMA ORDEN</th>
+                <th>ACCIONES</th>
+              </tr>
+            </thead>
+            <tbody id="tablaProductos"></tbody>
+            <tfoot>
+              <tr>
+                <th>ID PRODUCTO</th>
+                <th>NOMBRE</th>
+                <th>PRECIO</th>
+                <th>STOCK</th>
+                <th>ÚLTIMA ORDEN</th>
+                <th>ACCIONES</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/sidebarAndTooltip.js"></script>
+    <script type="module" src="/js/admin.js"></script>
+  </body>
+</html>
