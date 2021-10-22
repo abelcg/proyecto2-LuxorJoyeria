@@ -47,12 +47,13 @@ let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       });
     });   */
     
-    
+   
 
 closeBtn.addEventListener("click", () => {
   sidebar.classList.toggle("show");
+  sidebar.classList.toggle("shrink");
   menuBtnChange(); //calling the function(optional)
-  hideTooltip();
+   hideTooltip();  
 });
 
 // following are the code to change sidebar button(optional)
@@ -64,13 +65,15 @@ function menuBtnChange() {
   }
 }
 
- /* function hideTooltip() {
+
+
+
+ function hideTooltip() {
     console.log(tooltipTriggerList);
     console.log(tooltipList);
     tooltipTriggerList.forEach(tolltip => {
          let instance = bootstrap.Tooltip.getOrCreateInstance(tolltip);
         console.log(instance);
         instance.hide(); 
-        tolltip.classList.toggle('open');
       });
-}  */
+}  
