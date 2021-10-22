@@ -58,7 +58,7 @@
           <ul class="nav-list ps-0">
             <li>
               <a
-                href="#"
+                href="/index.html"
                 data-bs-toggle="tooltip"
                 data-bs-placement="right"
                 title="Inicio"
@@ -907,7 +907,7 @@
                                     width: 40px;
                                     height: 40px;
                                   "
-                                > 
+                                >
                                   <img
                                     alt="Jason Maxwell"
                                     src="https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-1.jpg&w=48&q=75"
@@ -933,7 +933,7 @@
                                       max-height: 100%;
                                     "
                                     srcset="
-                                    https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-1.jpg&w=48&q=75
+                                      https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-1.jpg&w=48&q=75
                                     "
                                   />
                                 </div>
@@ -1029,34 +1029,17 @@
                                     height: 40px;
                                   "
                                 >
-                                  <img
-                                    alt="Sam Andy"
-                                    src=https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-2.jpg&w=48&q=75
-                                    decoding="async"
-                                    data-nimg="true"
-                                    class="rounded-circle"
-                                    style="
-                                      position: absolute;
-                                      top: 0;
-                                      left: 0;
-                                      bottom: 0;
-                                      right: 0;
-                                      box-sizing: border-box;
-                                      padding: 0;
-                                      border: none;
-                                      margin: auto;
-                                      display: block;
-                                      width: 0;
-                                      height: 0;
-                                      min-width: 100%;
-                                      max-width: 100%;
-                                      min-height: 100%;
-                                      max-height: 100%;
-                                    "
-                                    srcset="
-                                    https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-2.jpg&w=48&q=75
-                                    "
-                                  />
+                                  <img alt="Sam Andy"
+                                  src=https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-2.jpg&w=48&q=75
+                                  decoding="async" data-nimg="true"
+                                  class="rounded-circle" style=" position:
+                                  absolute; top: 0; left: 0; bottom: 0; right:
+                                  0; box-sizing: border-box; padding: 0; border:
+                                  none; margin: auto; display: block; width: 0;
+                                  height: 0; min-width: 100%; max-width: 100%;
+                                  min-height: 100%; max-height: 100%; " srcset="
+                                  https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-2.jpg&w=48&q=75
+                                  " />
                                 </div>
                               </div>
                             </div>
@@ -1175,7 +1158,7 @@
                                       max-height: 100%;
                                     "
                                     srcset="
-                                    https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-3.jpg&w=48&q=75
+                                      https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-3.jpg&w=48&q=75
                                     "
                                   />
                                 </div>
@@ -1296,7 +1279,7 @@
                                       max-height: 100%;
                                     "
                                     srcset="
-                                    https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-4.jpg&w=48&q=75
+                                      https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-4.jpg&w=48&q=75
                                     "
                                   />
                                 </div>
@@ -1339,6 +1322,159 @@
                 </div>
               </div>
             </section>
+            <section class="mb-4">
+              <h2 class="section-heading section-heading-ms mb-4 mb-lg-5">
+                Productos 🛍️
+              </h2>
+              <div class="row g-1">
+                <div class="card mb-4 mb-lg-0 col-lg-4">
+                  <div class="py-4 card-header">
+                    <h4 class="card-heading">Cargar productos</h4>
+                  </div>
+                  <div class="card-body">
+                    <form class="my-0 py-3" id="formProducto">
+                      <div class="mb-3">
+                        <label for="codigo" class="form-label">ID Producto</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="ID_producto"
+                          aria-describedby="ID_producto"
+                          placeholder="ID único"
+                          required
+                          maxlength="6"
+                        />
+                        <div class="invalid-feedback">
+                          Este campo es obligatorio
+                        </div>
+                        <div class="valid-feedback">Este campo es correcto</div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="nombre"
+                          aria-describedby="nombre"
+                          placeholder="Mouse Logitec"
+                          required
+                          maxlength="20"
+                        />
+                        <div class="invalid-feedback">
+                          Este campo es obligatorio
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="Precio" class="form-label">Precio</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="precio"
+                          aria-describedby="precio"
+                          placeholder="Precio del producto"
+                          required
+                          maxlength="10"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="Stock" class="form-label"
+                          >Stock Disponible</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="stock"
+                          placeholder="ej: 5"
+                          aria-describedby="stock"
+                          required
+                          max="1000"
+                          min="1"
+                        />
+                        <div class="invalid-feedback">
+                          Este campo es obligatorio 
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="fecha_orden" class="form-label"
+                          >Última Orden</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="fecha_orden"
+                          aria-describedby="fecha_orden"
+                          placeholder="AAAA/MM/DD"
+                          required
+                        />
+                      </div>
+                      <div
+                        class="alert alert-danger mt-4 d-none"
+                        role="alert"
+                        id="msjAlerta"
+                      >
+                        Debe completar todos los datos
+                      </div>
+                      <div class="text-end mt-4">
+                        <button type="submit" class="btn btn-primary">
+                          Guardar
+                        </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="card-footer"></div>
+                </div>
+                <div class="card-table card mb-lg-0 col-lg-7 offset-lg-1 mb-4">
+                  <div class="py-4 card-header">
+                    <h2 class="card-heading">Productos</h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="text-end">
+                      <button class="btn btn-primary my-4" id="btn-agregar">
+                        Agregar
+                      </button>
+                    </div>
+                    <div class="table-responsive d-flex  flex-wrap">
+                      <table
+                        id="myTable"
+                        class="
+                          text-center
+                          mb-0
+                          table
+                          table-borderless
+                          table-hover
+                          table-light
+                          table-striped
+                          w-100
+                        "
+                      >
+                        <thead class="table-dark text-light">
+                          <tr>
+                            <th>ID PRODUCTO</th>
+                            <th>NOMBRE</th>
+                            <th>PRECIO</th>
+                            <th>STOCK</th>
+                            <th>ÚLTIMA ORDEN</th>
+                            <th>ACCIONES</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tablaProductos"></tbody>
+                        <tfoot>
+                          <tr>
+                            <th>ID PRODUCTO</th>
+                            <th>NOMBRE</th>
+                            <th>PRECIO</th>
+                            <th>STOCK</th>
+                            <th>ÚLTIMA ORDEN</th>
+                            <th>ACCIONES</th>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="card-footer"></div>
+                </div>
+              </div>
+            </section>
           </div>
           <footer
             class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100"
@@ -1346,7 +1482,7 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="text-center text-md-start fw-bold col-md-6">
-                  <p class="mb-2 mb-md-0">Your company © 2021</p>
+                  <p class="mb-2 mb-md-0">JoyeriaLuxor © 2021</p>
                 </div>
                 <div class="text-center text-md-end text-gray-400 col-md-6">
                   <p class="mb-0">Version 1.0.0</p>
@@ -1356,118 +1492,8 @@
           </footer>
         </div>
       </div>
-
-      <section class="col-md-10 col-sm-1 my-5">
-        <div>
-          <form class="my-5 p-3 bg-light" id="formProducto">
-            <h3>Cargar productos</h3>
-            <hr />
-            <div class="mb-3">
-              <label for="codigo" class="form-label">ID Producto</label>
-              <input
-                type="text"
-                class="form-control"
-                id="ID_producto"
-                aria-describedby="ID_producto"
-                placeholder="ID único"
-              />
-              <div class="invalid-feedback">Este campo es obligatorio</div>
-              <div class="valid-feedback">Este campo es correcto</div>
-            </div>
-            <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input
-                type="text"
-                class="form-control"
-                id="nombre"
-                aria-describedby="nombre"
-                placeholder="Mouse Logitec"
-              />
-              <div class="invalid-feedback">Este campo es obligatorio</div>
-            </div>
-            <div class="mb-3">
-              <label for="Precio" class="form-label">Precio</label>
-              <input
-                type="text"
-                class="form-control"
-                id="precio"
-                aria-describedby="precio"
-                placeholder="Precio del producto"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="Stock" class="form-label">Stock Disponible</label>
-              <input
-                type="number"
-                class="form-control"
-                id="stock"
-                placeholder="ej: 5"
-                aria-describedby="stock"
-              />
-              <div class="invalid-feedback">
-                Este campo es obligatorio y la cantidad de caracteres debe ser
-                entre 2 a 5
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="fecha_orden" class="form-label">Última Orden</label>
-              <input
-                type="date"
-                class="form-control"
-                id="fecha_orden"
-                aria-describedby="fecha_orden"
-                placeholder="AAAA/MM/DD"
-              />
-            </div>
-            <button type="submit" class="btn btn-primary">Guardar</button>
-            <div
-              class="alert alert-danger mt-4 d-none"
-              role="alert"
-              id="msjAlerta"
-            >
-              Debe completar todos los datos
-            </div>
-          </form>
-        </div>
-        <h4 class="display-5 text-center">Productos</h4>
-        <hr />
-        <button class="btn btn-primary my4" id="btn-agregar">Agregar</button>
-        <div class="table-responsive">
-          <table
-            id="myTable"
-            class="
-              text-center
-              mb-0
-              table table-borderless table-hover table-light table-striped
-              w-100
-            "
-          >
-            <thead class="table-dark text-light">
-              <tr>
-                <th>ID PRODUCTO</th>
-                <th>NOMBRE</th>
-                <th>PRECIO</th>
-                <th>STOCK</th>
-                <th>ÚLTIMA ORDEN</th>
-                <th>ACCIONES</th>
-              </tr>
-            </thead>
-            <tbody id="tablaProductos"></tbody>
-            <tfoot>
-              <tr>
-                <th>ID PRODUCTO</th>
-                <th>NOMBRE</th>
-                <th>PRECIO</th>
-                <th>STOCK</th>
-                <th>ÚLTIMA ORDEN</th>
-                <th>ACCIONES</th>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-      </section>
     </main>
-    
+
     <!-- chart js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
