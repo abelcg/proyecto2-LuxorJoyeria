@@ -12,6 +12,11 @@
       href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <!-- script de fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/844be37ca0.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <link
@@ -106,6 +111,17 @@
                 href="#"
                 data-bs-toggle="tooltip"
                 data-bs-placement="right"
+                title="Productos"
+              >
+              <i class='bx bx-list-ul'></i>
+                <span class="links_name">Productos</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
                 title="Ordenes"
               >
                 <i class="bx bx-cart-alt"></i>
@@ -178,12 +194,12 @@
                     <div class="card-widget-body">
                       <div class="dot me-3 bg-indigo"></div>
                       <div class="text">
-                        <h6 class="mb-0">Data consumed</h6>
-                        <span class="text-gray-500">145,14 GB</span>
+                        <h6 class="mb-0">Vistas mensuales</h6>
+                        <span class="text-gray-500">73.451</span>
                       </div>
                     </div>
                     <div class="icon text-white bg-indigo">
-                      <i class="bi bi-gem"></i>
+                      <i class="far fa-eye"></i>
                     </div>
                   </div>
                 </div>
@@ -192,26 +208,12 @@
                     <div class="card-widget-body">
                       <div class="dot me-3 bg-green"></div>
                       <div class="text">
-                        <h6 class="mb-0">Open cases</h6>
-                        <span class="text-gray-500">30</span>
+                        <h6 class="mb-0">Últimas ventas</h6>
+                        <span class="text-gray-500">180</span>
                       </div>
                     </div>
                     <div class="icon text-white bg-green">
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="far"
-                        data-icon="clipboard"
-                        class="svg-inline--fa fa-clipboard fa-w-12"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 384 512"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 40c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm144 418c0 3.3-2.7 6-6 6H54c-3.3 0-6-2.7-6-6V118c0-3.3 2.7-6 6-6h42v36c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-36h42c3.3 0 6 2.7 6 6z"
-                        ></path>
-                      </svg>
+                      <i class="bx bx-cart"></i>
                     </div>
                   </div>
                 </div>
@@ -220,26 +222,12 @@
                     <div class="card-widget-body">
                       <div class="dot me-3 bg-blue"></div>
                       <div class="text">
-                        <h6 class="mb-0">Work orders</h6>
+                        <h6 class="mb-0">Pedidos Ingresados</h6>
                         <span class="text-gray-500">400</span>
                       </div>
                     </div>
                     <div class="icon text-white bg-blue">
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="dolly-flatbed"
-                        class="svg-inline--fa fa-dolly-flatbed fa-w-20"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 640 512"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M208 320h384c8.8 0 16-7.2 16-16V48c0-8.8-7.2-16-16-16H448v128l-48-32-48 32V32H208c-8.8 0-16 7.2-16 16v256c0 8.8 7.2 16 16 16zm416 64H128V16c0-8.8-7.2-16-16-16H16C7.2 0 0 7.2 0 16v32c0 8.8 7.2 16 16 16h48v368c0 8.8 7.2 16 16 16h82.9c-1.8 5-2.9 10.4-2.9 16 0 26.5 21.5 48 48 48s48-21.5 48-48c0-5.6-1.2-11-2.9-16H451c-1.8 5-2.9 10.4-2.9 16 0 26.5 21.5 48 48 48s48-21.5 48-48c0-5.6-1.2-11-2.9-16H624c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16z"
-                        ></path>
-                      </svg>
+                      <i class="fas fa-file-invoice"></i>
                     </div>
                   </div>
                 </div>
@@ -248,138 +236,34 @@
                     <div class="card-widget-body">
                       <div class="dot me-3 bg-red"></div>
                       <div class="text">
-                        <h6 class="mb-0">New invoices</h6>
-                        <span class="text-gray-500">123</span>
+                        <h6 class="mb-0">Ganancias</h6>
+                        <span class="text-gray-500">$123.158.245</span>
                       </div>
                     </div>
                     <div class="icon text-white bg-red">
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="receipt"
-                        class="svg-inline--fa fa-receipt fa-w-12"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 384 512"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M358.4 3.2L320 48 265.6 3.2a15.9 15.9 0 0 0-19.2 0L192 48 137.6 3.2a15.9 15.9 0 0 0-19.2 0L64 48 25.6 3.2C15-4.7 0 2.8 0 16v480c0 13.2 15 20.7 25.6 12.8L64 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L192 464l54.4 44.8a15.9 15.9 0 0 0 19.2 0L320 464l38.4 44.8c10.5 7.9 25.6.4 25.6-12.8V16c0-13.2-15-20.7-25.6-12.8zM320 360c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h240c4.4 0 8 3.6 8 8v16z"
-                        ></path>
-                      </svg>
+                      <ion-icon name="cash-outline"></ion-icon>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
-            <section class="mb-4 mb-lg-5">
-              <h2 class="section-heading section-heading-ms mb-4 mb-lg-5">
-                Finances 💰
+            <section class="mb-4 mb-lg-4">
+              <h2 class="section-heading section-heading-ms fs-4 mb-4 mb-lg-5">
+                Finanzas 💰
               </h2>
               <div class="row">
                 <div class="mb-4 mb-lg-0 col-lg-7">
-                  <div class="h-100 card">
+                  <div class="h-auto card">
                     <div class="card-header">
-                      <h4 class="card-heading">Your Account Balance</h4>
+                      <h4 class="card-heading">Ventas anuales</h4>
                     </div>
                     <div class="card-body">
                       <div class="chart-holder">
-                        <canvas
-                          class="w-100"
-                          id="myChart"
-                          style="
-                            display: block;
-                            box-sizing: border-box;
-                            height: 354px;
-                            width: 711px;
-                          "
-                          width="711"
-                          height="354"
-                        ></canvas>
+                        <canvas id="myChart" width="711" height="354"></canvas>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="mb-4 mb-lg-0 col-lg-5">
-                  <div class="h-50 pb-4 pb-lg-2">
-                    <div class="h-100 card">
-                      <div class="d-flex card-body">
-                        <div class="w-100 align-items-center row">
-                          <div class="mb-4 mb-sm-0 col-sm-5">
-                            <h2 class="mb-0 d-flex align-items-center">
-                              <span>86.4</span
-                              ><span
-                                class="dot bg-green d-inline-block ms-3"
-                              ></span>
-                            </h2>
-                            <span class="text-muted text-uppercase small"
-                              >Work hours</span
-                            >
-                            <hr />
-                            <small class="text-muted"
-                              >Hours worked this month</small
-                            >
-                          </div>
-                          <div class="col-sm-7">
-                            <canvas
-                              width="390"
-                              height="195"
-                              style="
-                                display: block;
-                                box-sizing: border-box;
-                                height: 195px;
-                                width: 390px;
-                              "
-                            ></canvas>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="h-50 pt-lg-2">
-                    <div class="h-100 card">
-                      <div class="d-flex card-body">
-                        <div class="w-100 align-items-center row">
-                          <div class="mb-4 mb-sm-0 col-sm-5">
-                            <h2 class="mb-0 d-flex align-items-center">
-                              <span>325</span
-                              ><span
-                                class="dot bg-indigo d-inline-block ms-3"
-                              ></span>
-                            </h2>
-                            <span class="text-muted text-uppercase small"
-                              >Tasks Completed</span
-                            >
-                            <hr />
-                            <small class="text-muted"
-                              >Tasks Completed this months</small
-                            >
-                          </div>
-                          <div class="col-sm-7">
-                            <canvas
-                              width="390"
-                              height="195"
-                              style="
-                                display: block;
-                                box-sizing: border-box;
-                                height: 195px;
-                                width: 390px;
-                              "
-                            ></canvas>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="mb-4 mb-lg-5">
-              <h2 class="section-heading section-heading-ms mb-4 mb-lg-5">
-                Usage 📈
-              </h2>
-              <div class="row">
                 <div class="mb-4 mb-lg-0 col-lg-5">
                   <div class="h-50 pb-4 pb-lg-2">
                     <div class="h-100 card">
@@ -389,27 +273,87 @@
                             <h2 class="mb-0 d-flex align-items-center">
                               <span>86%</span
                               ><span
-                                class="dot bg-pink d-inline-block ms-3"
+                                class="dot bg-green d-inline-block ms-3"
                               ></span>
                             </h2>
                             <span class="text-muted text-uppercase small"
-                              >Monthly Usage</span
+                              >Objetivo</span
                             >
                             <hr />
                             <small class="text-muted"
-                              >Monthly allowed usage</small
+                              >Ventas mensuales</small
+                            >
+                          </div>
+                          <div class="col-sm-7">
+                            <canvas id="donutChart" class="donutChart" width="390" height="195"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-50 pt-lg-2">
+                    <div class="h-100 card">
+                      <div class="d-flex card-body">
+                        <div class="w-100 align-items-center row">
+                          <div class="mb-4 mb-sm-0 col-sm-5">
+                            <h2 class="mb-0 d-flex align-items-center">
+                              <span>$116.250</span
+                              ><span
+                                class="dot bg-indigo d-inline-block ms-3"
+                              ></span>
+                            </h2>
+                            <span class="text-muted text-uppercase small"
+                              >Objetivo $155.000</span
+                            >
+                            <hr />
+                            <small class="text-muted"
+                              >30 Pedidos Semanales</small
                             >
                           </div>
                           <div class="col-sm-7">
                             <canvas
+                            id="donutChart2" class="donutChart"
                               width="390"
                               height="195"
-                              style="
-                                display: block;
-                                box-sizing: border-box;
-                                height: 195px;
-                                width: 390px;
-                              "
+                            ></canvas>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="mb-4 mb-lg-5">
+              <h2 class="section-heading section-heading-ms fs-4 mb-4 mb-lg-5">
+                Vistas 📈
+              </h2>
+              <div class="row">
+                <div class="mb-4 mb-lg-0 col-lg-5">
+                  <div class="h-50 pb-4 pb-lg-2">
+                    <div class="h-100 card">
+                      <div class="d-flex card-body">
+                        <div class="w-100 align-items-center row">
+                          <div class="mb-4 mb-sm-0 col-sm-5">
+                            <h2 class="mb-0 d-flex align-items-center">
+                              <span>2.449</span
+                              ><span
+                                class="dot bg-pink d-inline-block ms-3"
+                              ></span>
+                            </h2>
+                            <span class="text-muted text-uppercase small"
+                              >Visitas Hoy</span
+                            >
+                            <hr />
+                            <small class="text-muted"
+                              >Cantidad de usuarios</small
+                            >
+                          </div>
+                          <div class="col-sm-7">
+                            <canvas
+                             id="donutChart3" class="donutChart"
+                              width="390"
+                              height="195"
                             ></canvas>
                           </div>
                         </div>
@@ -422,29 +366,24 @@
                         <div class="w-100 align-items-center row">
                           <div class="mb-4 mb-sm-0 col-sm-5">
                             <h2 class="mb-0 d-flex align-items-center">
-                              <span>$126,41</span
+                              <span class="fs-5">Productos</span
                               ><span
-                                class="dot bg-green d-inline-block ms-3"
+                                class="dot bg-indigo d-inline-block ms-3"
                               ></span>
                             </h2>
                             <span class="text-muted text-uppercase small"
-                              >All Income</span
+                              >Preferidos según hombres o mujeres</span
                             >
                             <hr />
                             <small class="text-muted"
-                              >Lorem ipsum dolor sit</small
+                              >Total por categoría</small
                             >
                           </div>
                           <div class="col-sm-7">
                             <canvas
+                            id="radar-chart"
                               width="390"
                               height="195"
-                              style="
-                                display: block;
-                                box-sizing: border-box;
-                                height: 195px;
-                                width: 390px;
-                              "
                             ></canvas>
                           </div>
                         </div>
@@ -455,20 +394,15 @@
                 <div class="col-lg-7">
                   <div class="h-100 card">
                     <div class="card-header">
-                      <h4 class="card-heading">Your referrals</h4>
+                      <h4 class="card-heading">Cantidad de usuarios alcanzados por canal</h4>
                     </div>
                     <div class="card-body">
                       <div class="chart-holder">
                         <canvas
+                          id="bar-chart"
                           class="w-100"
                           width="711"
                           height="354"
-                          style="
-                            display: block;
-                            box-sizing: border-box;
-                            height: 354px;
-                            width: 711px;
-                          "
                         ></canvas>
                       </div>
                     </div>
@@ -476,854 +410,8 @@
                 </div>
               </div>
             </section>
-            <section class="mb-4 mb-lg-5">
-              <h2 class="section-heading section-heading-ms mb-4 mb-lg-5">
-                Updates 🆕
-              </h2>
-              <div class="row">
-                <div class="mb-5 mb-lg-0 col-xl-6 col-lg-7">
-                  <div class="mb-5 mb-lg-0 card">
-                    <div class="card-header">
-                      <div class="card-heading">Transaction history</div>
-                    </div>
-                    <div class="card-body">
-                      <p class="text-gray-500 mb-5">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit.
-                      </p>
-                      <div
-                        class="
-                          d-flex
-                          justify-content-between
-                          align-items-start align-items-sm-center
-                          mb-4
-                          flex-column flex-sm-row
-                        "
-                      >
-                        <div class="left d-flex align-items-center">
-                          <div class="icon icon-lg shadow me-3 text-gray-700">
-                            <svg
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fab"
-                              data-icon="dropbox"
-                              class="svg-inline--fa fa-dropbox fa-w-17"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 528 512"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M264.4 116.3l-132 84.3 132 84.3-132 84.3L0 284.1l132.3-84.3L0 116.3 132.3 32l132.1 84.3zM131.6 395.7l132-84.3 132 84.3-132 84.3-132-84.3zm132.8-111.6l132-84.3-132-83.6L395.7 32 528 116.3l-132.3 84.3L528 284.8l-132.3 84.3-131.3-85z"
-                              ></path>
-                            </svg>
-                          </div>
-                          <div class="text">
-                            <h6 class="mb-0 d-flex align-items-center">
-                              <span>Dropbox Inc.</span
-                              ><span class="dot dot-sm ms-2 bg-indigo"></span>
-                            </h6>
-                            <small class="text-gray-500">Account renewal</small>
-                          </div>
-                        </div>
-                        <div
-                          class="right ms-5 ms-sm-0 ps-3 ps-sm-0 text-indigo"
-                        >
-                          <h5>-$20</h5>
-                        </div>
-                      </div>
-                      <div
-                        class="
-                          d-flex
-                          justify-content-between
-                          align-items-start align-items-sm-center
-                          mb-4
-                          flex-column flex-sm-row
-                        "
-                      >
-                        <div class="left d-flex align-items-center">
-                          <div class="icon icon-lg shadow me-3 text-gray-700">
-                            <svg
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fab"
-                              data-icon="apple"
-                              class="svg-inline--fa fa-apple fa-w-12"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 384 512"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
-                              ></path>
-                            </svg>
-                          </div>
-                          <div class="text">
-                            <h6 class="mb-0 d-flex align-items-center">
-                              <span>App Store.</span
-                              ><span class="dot dot-sm ms-2 bg-green"></span>
-                            </h6>
-                            <small class="text-gray-500">Software cost</small>
-                          </div>
-                        </div>
-                        <div class="right ms-5 ms-sm-0 ps-3 ps-sm-0 text-green">
-                          <h5>-$35</h5>
-                        </div>
-                      </div>
-                      <div
-                        class="
-                          d-flex
-                          justify-content-between
-                          align-items-start align-items-sm-center
-                          mb-4
-                          flex-column flex-sm-row
-                        "
-                      >
-                        <div class="left d-flex align-items-center">
-                          <div class="icon icon-lg shadow me-3 text-gray-700">
-                            <svg
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fas"
-                              data-icon="shopping-basket"
-                              class="svg-inline--fa fa-shopping-basket fa-w-18"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 576 512"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M576 216v16c0 13.255-10.745 24-24 24h-8l-26.113 182.788C514.509 462.435 494.257 480 470.37 480H105.63c-23.887 0-44.139-17.565-47.518-41.212L32 256h-8c-13.255 0-24-10.745-24-24v-16c0-13.255 10.745-24 24-24h67.341l106.78-146.821c10.395-14.292 30.407-17.453 44.701-7.058 14.293 10.395 17.453 30.408 7.058 44.701L170.477 192h235.046L326.12 82.821c-10.395-14.292-7.234-34.306 7.059-44.701 14.291-10.395 34.306-7.235 44.701 7.058L484.659 192H552c13.255 0 24 10.745 24 24zM312 392V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm112 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm-224 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24z"
-                              ></path>
-                            </svg>
-                          </div>
-                          <div class="text">
-                            <h6 class="mb-0 d-flex align-items-center">
-                              <span>Supermarket.</span
-                              ><span class="dot dot-sm ms-2 bg-blue"></span>
-                            </h6>
-                            <small class="text-gray-500">Shopping</small>
-                          </div>
-                        </div>
-                        <div class="right ms-5 ms-sm-0 ps-3 ps-sm-0 text-blue">
-                          <h5>-$15</h5>
-                        </div>
-                      </div>
-                      <div
-                        class="
-                          d-flex
-                          justify-content-between
-                          align-items-start align-items-sm-center
-                          mb-4
-                          flex-column flex-sm-row
-                        "
-                      >
-                        <div class="left d-flex align-items-center">
-                          <div class="icon icon-lg shadow me-3 text-gray-700">
-                            <svg
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fab"
-                              data-icon="android"
-                              class="svg-inline--fa fa-android fa-w-18"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 576 512"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M420.55,301.93a24,24,0,1,1,24-24,24,24,0,0,1-24,24m-265.1,0a24,24,0,1,1,24-24,24,24,0,0,1-24,24m273.7-144.48,47.94-83a10,10,0,1,0-17.27-10h0l-48.54,84.07a301.25,301.25,0,0,0-246.56,0L116.18,64.45a10,10,0,1,0-17.27,10h0l47.94,83C64.53,202.22,8.24,285.55,0,384H576c-8.24-98.45-64.54-181.78-146.85-226.55"
-                              ></path>
-                            </svg>
-                          </div>
-                          <div class="text">
-                            <h6 class="mb-0 d-flex align-items-center">
-                              <span>Play Store.</span
-                              ><span class="dot dot-sm ms-2 bg-red"></span>
-                            </h6>
-                            <small class="text-gray-500">Software cost</small>
-                          </div>
-                        </div>
-                        <div class="right ms-5 ms-sm-0 ps-3 ps-sm-0 text-red">
-                          <h5>-$20</h5>
-                        </div>
-                      </div>
-                      <div
-                        class="
-                          d-flex
-                          justify-content-between
-                          align-items-start align-items-sm-center
-                          mb-4
-                          flex-column flex-sm-row
-                        "
-                      >
-                        <div class="left d-flex align-items-center">
-                          <div class="icon icon-lg shadow me-3 text-gray-700">
-                            <svg
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fab"
-                              data-icon="dropbox"
-                              class="svg-inline--fa fa-dropbox fa-w-17"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 528 512"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M264.4 116.3l-132 84.3 132 84.3-132 84.3L0 284.1l132.3-84.3L0 116.3 132.3 32l132.1 84.3zM131.6 395.7l132-84.3 132 84.3-132 84.3-132-84.3zm132.8-111.6l132-84.3-132-83.6L395.7 32 528 116.3l-132.3 84.3L528 284.8l-132.3 84.3-131.3-85z"
-                              ></path>
-                            </svg>
-                          </div>
-                          <div class="text">
-                            <h6 class="mb-0 d-flex align-items-center">
-                              <span>Dropbox Inc.</span
-                              ><span class="dot dot-sm ms-2 bg-indigo"></span>
-                            </h6>
-                            <small class="text-gray-500">Account renewal</small>
-                          </div>
-                        </div>
-                        <div
-                          class="right ms-5 ms-sm-0 ps-3 ps-sm-0 text-indigo"
-                        >
-                          <h5>-$20</h5>
-                        </div>
-                      </div>
-                      <div
-                        class="
-                          d-flex
-                          justify-content-between
-                          align-items-start align-items-sm-center
-                          mb-4
-                          flex-column flex-sm-row
-                        "
-                      >
-                        <div class="left d-flex align-items-center">
-                          <div class="icon icon-lg shadow me-3 text-gray-700">
-                            <svg
-                              aria-hidden="true"
-                              focusable="false"
-                              data-prefix="fab"
-                              data-icon="apple"
-                              class="svg-inline--fa fa-apple fa-w-12"
-                              role="img"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 384 512"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
-                              ></path>
-                            </svg>
-                          </div>
-                          <div class="text">
-                            <h6 class="mb-0 d-flex align-items-center">
-                              <span>App Store.</span
-                              ><span class="dot dot-sm ms-2 bg-green"></span>
-                            </h6>
-                            <small class="text-gray-500">Software cost</small>
-                          </div>
-                        </div>
-                        <div class="right ms-5 ms-sm-0 ps-3 ps-sm-0 text-green">
-                          <h5>-$35</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-6 col-lg-5">
-                  <div class="h-100 row">
-                    <div class="col-xxl-6">
-                      <div class="card-widget mb-4">
-                        <div class="card-widget-body">
-                          <div class="dot me-3 bg-indigo"></div>
-                          <div class="text">
-                            <h6 class="mb-0">Completed cases</h6>
-                            <span class="text-gray-500">127 new cases</span>
-                          </div>
-                        </div>
-                        <div class="icon text-white bg-indigo">
-                          <svg
-                            aria-hidden="true"
-                            focusable="false"
-                            data-prefix="fas"
-                            data-icon="clipboard-check"
-                            class="svg-inline--fa fa-clipboard-check fa-w-12"
-                            role="img"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 384 512"
-                          >
-                            <path
-                              fill="currentColor"
-                              d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 40c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm121.2 231.8l-143 141.8c-4.7 4.7-12.3 4.6-17-.1l-82.6-83.3c-4.7-4.7-4.6-12.3.1-17L99.1 285c4.7-4.7 12.3-4.6 17 .1l46 46.4 106-105.2c4.7-4.7 12.3-4.6 17 .1l28.2 28.4c4.7 4.8 4.6 12.3-.1 17z"
-                            ></path>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xxl-6">
-                      <div class="card-widget mb-4">
-                        <div class="card-widget-body">
-                          <div class="dot me-3 bg-green"></div>
-                          <div class="text">
-                            <h6 class="mb-0">New Quotes</h6>
-                            <span class="text-gray-500">214 new quotes</span>
-                          </div>
-                        </div>
-                        <div class="icon text-white bg-green">
-                          <svg
-                            aria-hidden="true"
-                            focusable="false"
-                            data-prefix="fas"
-                            data-icon="dollar-sign"
-                            class="svg-inline--fa fa-dollar-sign fa-w-9"
-                            role="img"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 288 512"
-                          >
-                            <path
-                              fill="currentColor"
-                              d="M209.2 233.4l-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z"
-                            ></path>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xxl-6">
-                      <div class="card-widget mb-4">
-                        <div class="card-widget-body">
-                          <div class="dot me-3 bg-blue"></div>
-                          <div class="text">
-                            <h6 class="mb-0">New clients</h6>
-                            <span class="text-gray-500">25 new clients</span>
-                          </div>
-                        </div>
-                        <div class="icon text-white bg-blue">
-                          <svg
-                            aria-hidden="true"
-                            focusable="false"
-                            data-prefix="fas"
-                            data-icon="user-friends"
-                            class="svg-inline--fa fa-user-friends fa-w-20"
-                            role="img"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 640 512"
-                          >
-                            <path
-                              fill="currentColor"
-                              d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"
-                            ></path>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xxl-12 col-12 order-xxl-1">
-                      <div class="h-100 card">
-                        <div class="card-body">
-                          <h2 class="mb-0 d-flex align-items-center">
-                            <span>86.4</span
-                            ><span
-                              class="dot bg-red d-inline-block ms-3"
-                            ></span>
-                          </h2>
-                          <span class="text-muted">Daily Profile Visitors</span>
-                          <div class="chart-holder">
-                            <canvas
-                              class="w-100"
-                              width="711"
-                              height="355"
-                              style="
-                                display: block;
-                                box-sizing: border-box;
-                                height: 355px;
-                                width: 711px;
-                              "
-                            ></canvas>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
             <section class="mb-4">
-              <h2 class="section-heading section-heading-ms mb-4 mb-lg-5">
-                People 👩‍💻
-              </h2>
-              <div class="row">
-                <div class="col-xl-12 col-sm-6">
-                  <a href="#" class="text-decoration-none text-reset"
-                    ><div
-                      class="
-                        messag
-                        px-5
-                        py-3
-                        mb-4
-                        bg-hover-gradient-primary
-                        card
-                      "
-                    >
-                      <div class="row">
-                        <div
-                          class="
-                            d-flex
-                            align-items-center
-                            flex-column flex-xl-row
-                            text-center text-md-left
-                            col-xl-3
-                          "
-                        >
-                          <strong class="h5 mb-0"
-                            >24<sup
-                              class="
-                                text-xs text-gray-500
-                                font-weight-normal
-                                ms-1
-                              "
-                              >Apr</sup
-                            ></strong
-                          >
-                          <div class="mx-3">
-                            <div class="avatar my-2 my-xl-0">
-                              <div
-                                class="
-                                  position-relative
-                                  overflow-hidden
-                                  rounded-circle
-                                  h-100
-                                  d-flex
-                                  align-items-center
-                                  justify-content-center
-                                "
-                              >
-                                <div
-                                  style="
-                                    overflow: hidden;
-                                    box-sizing: border-box;
-                                    display: inline-block;
-                                    position: relative;
-                                    width: 40px;
-                                    height: 40px;
-                                  "
-                                >
-                                  <img
-                                    alt="Jason Maxwell"
-                                    src="https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-1.jpg&w=48&q=75"
-                                    decoding="async"
-                                    data-nimg="true"
-                                    class="rounded-circle"
-                                    style="
-                                      position: absolute;
-                                      top: 0;
-                                      left: 0;
-                                      bottom: 0;
-                                      right: 0;
-                                      box-sizing: border-box;
-                                      padding: 0;
-                                      border: none;
-                                      margin: auto;
-                                      display: block;
-                                      width: 0;
-                                      height: 0;
-                                      min-width: 100%;
-                                      max-width: 100%;
-                                      min-height: 100%;
-                                      max-height: 100%;
-                                    "
-                                    srcset="
-                                      https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-1.jpg&w=48&q=75
-                                    "
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <h6 class="mb-0">Jason Maxwell</h6>
-                        </div>
-                        <div
-                          class="
-                            d-flex
-                            align-items-center
-                            flex-column flex-xl-row
-                            text-center text-md-left
-                            col-xl-9
-                          "
-                        >
-                          <div
-                            class="
-                              bg-gray-200
-                              rounded-pill
-                              px-4
-                              py-1
-                              me-0 me-xl-3
-                              mt-2 mt-xl-0
-                              text-sm text-dark
-                              exclude
-                            "
-                          >
-                            User testing
-                          </div>
-                          <p class="mb-0 mt-3 mt-lg-0">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor.
-                          </p>
-                        </div>
-                      </div>
-                    </div></a
-                  >
-                </div>
-                <div class="col-xl-12 col-sm-6">
-                  <a href="#" class="text-decoration-none text-reset"
-                    ><div
-                      class="
-                        messag
-                        px-5
-                        py-3
-                        mb-4
-                        bg-hover-gradient-primary
-                        card
-                      "
-                    >
-                      <div class="row">
-                        <div
-                          class="
-                            d-flex
-                            align-items-center
-                            flex-column flex-xl-row
-                            text-center text-md-left
-                            col-xl-3
-                          "
-                        >
-                          <strong class="h5 mb-0"
-                            >15<sup
-                              class="
-                                text-xs text-gray-500
-                                font-weight-normal
-                                ms-1
-                              "
-                              >May</sup
-                            ></strong
-                          >
-                          <div class="mx-3">
-                            <div class="avatar my-2 my-xl-0">
-                              <div
-                                class="
-                                  position-relative
-                                  overflow-hidden
-                                  rounded-circle
-                                  h-100
-                                  d-flex
-                                  align-items-center
-                                  justify-content-center
-                                "
-                              >
-                                <div
-                                  style="
-                                    overflow: hidden;
-                                    box-sizing: border-box;
-                                    display: inline-block;
-                                    position: relative;
-                                    width: 40px;
-                                    height: 40px;
-                                  "
-                                >
-                                  <img alt="Sam Andy"
-                                  src=https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-2.jpg&w=48&q=75
-                                  decoding="async" data-nimg="true"
-                                  class="rounded-circle" style=" position:
-                                  absolute; top: 0; left: 0; bottom: 0; right:
-                                  0; box-sizing: border-box; padding: 0; border:
-                                  none; margin: auto; display: block; width: 0;
-                                  height: 0; min-width: 100%; max-width: 100%;
-                                  min-height: 100%; max-height: 100%; " srcset="
-                                  https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-2.jpg&w=48&q=75
-                                  " />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <h6 class="mb-0">Sam Andy</h6>
-                        </div>
-                        <div
-                          class="
-                            d-flex
-                            align-items-center
-                            flex-column flex-xl-row
-                            text-center text-md-left
-                            col-xl-9
-                          "
-                        >
-                          <div
-                            class="
-                              bg-gray-200
-                              rounded-pill
-                              px-4
-                              py-1
-                              me-0 me-xl-3
-                              mt-2 mt-xl-0
-                              text-sm text-dark
-                              exclude
-                            "
-                          >
-                            Web Developer
-                          </div>
-                          <p class="mb-0 mt-3 mt-lg-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit..
-                          </p>
-                        </div>
-                      </div>
-                    </div></a
-                  >
-                </div>
-                <div class="col-xl-12 col-sm-6">
-                  <a href="#" class="text-decoration-none text-reset"
-                    ><div
-                      class="
-                        messag
-                        px-5
-                        py-3
-                        mb-4
-                        bg-hover-gradient-primary
-                        card
-                      "
-                    >
-                      <div class="row">
-                        <div
-                          class="
-                            d-flex
-                            align-items-center
-                            flex-column flex-xl-row
-                            text-center text-md-left
-                            col-xl-3
-                          "
-                        >
-                          <strong class="h5 mb-0"
-                            >17<sup
-                              class="
-                                text-xs text-gray-500
-                                font-weight-normal
-                                ms-1
-                              "
-                              >Aug</sup
-                            ></strong
-                          >
-                          <div class="mx-3">
-                            <div class="avatar my-2 my-xl-0">
-                              <div
-                                class="
-                                  position-relative
-                                  overflow-hidden
-                                  rounded-circle
-                                  h-100
-                                  d-flex
-                                  align-items-center
-                                  justify-content-center
-                                "
-                              >
-                                <div
-                                  style="
-                                    overflow: hidden;
-                                    box-sizing: border-box;
-                                    display: inline-block;
-                                    position: relative;
-                                    width: 40px;
-                                    height: 40px;
-                                  "
-                                >
-                                  <img
-                                    alt="Margret Peter"
-                                    src="https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-3.jpg&w=48&q=75"
-                                    decoding="async"
-                                    data-nimg="true"
-                                    class="rounded-circle"
-                                    style="
-                                      position: absolute;
-                                      top: 0;
-                                      left: 0;
-                                      bottom: 0;
-                                      right: 0;
-                                      box-sizing: border-box;
-                                      padding: 0;
-                                      border: none;
-                                      margin: auto;
-                                      display: block;
-                                      width: 0;
-                                      height: 0;
-                                      min-width: 100%;
-                                      max-width: 100%;
-                                      min-height: 100%;
-                                      max-height: 100%;
-                                    "
-                                    srcset="
-                                      https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-3.jpg&w=48&q=75
-                                    "
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <h6 class="mb-0">Margret Peter</h6>
-                        </div>
-                        <div
-                          class="
-                            d-flex
-                            align-items-center
-                            flex-column flex-xl-row
-                            text-center text-md-left
-                            col-xl-9
-                          "
-                        >
-                          <div
-                            class="
-                              bg-gray-200
-                              rounded-pill
-                              px-4
-                              py-1
-                              me-0 me-xl-3
-                              mt-2 mt-xl-0
-                              text-sm text-dark
-                              exclude
-                            "
-                          >
-                            Analysis Agent
-                          </div>
-                          <p class="mb-0 mt-3 mt-lg-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit..
-                          </p>
-                        </div>
-                      </div>
-                    </div></a
-                  >
-                </div>
-                <div class="col-xl-12 col-sm-6">
-                  <a href="#" class="text-decoration-none text-reset"
-                    ><div
-                      class="
-                        messag
-                        px-5
-                        py-3
-                        mb-4
-                        bg-hover-gradient-primary
-                        card
-                      "
-                    >
-                      <div class="row">
-                        <div
-                          class="
-                            d-flex
-                            align-items-center
-                            flex-column flex-xl-row
-                            text-center text-md-left
-                            col-xl-3
-                          "
-                        >
-                          <strong class="h5 mb-0"
-                            >15<sup
-                              class="
-                                text-xs text-gray-500
-                                font-weight-normal
-                                ms-1
-                              "
-                              >Sep</sup
-                            ></strong
-                          >
-                          <div class="mx-3">
-                            <div class="avatar my-2 my-xl-0">
-                              <div
-                                class="
-                                  position-relative
-                                  overflow-hidden
-                                  rounded-circle
-                                  h-100
-                                  d-flex
-                                  align-items-center
-                                  justify-content-center
-                                "
-                              >
-                                <div
-                                  style="
-                                    overflow: hidden;
-                                    box-sizing: border-box;
-                                    display: inline-block;
-                                    position: relative;
-                                    width: 40px;
-                                    height: 40px;
-                                  "
-                                >
-                                  <img
-                                    alt="Jason Doe"
-                                    src="https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-4.jpg&w=48&q=75"
-                                    decoding="async"
-                                    data-nimg="true"
-                                    class="rounded-circle"
-                                    style="
-                                      position: absolute;
-                                      top: 0;
-                                      left: 0;
-                                      bottom: 0;
-                                      right: 0;
-                                      box-sizing: border-box;
-                                      padding: 0;
-                                      border: none;
-                                      margin: auto;
-                                      display: block;
-                                      width: 0;
-                                      height: 0;
-                                      min-width: 100%;
-                                      max-width: 100%;
-                                      min-height: 100%;
-                                      max-height: 100%;
-                                    "
-                                    srcset="
-                                      https://bubbly-react-is855x6h0-ondrej-svestka.vercel.app/_next/image?url=%2Fimg%2Favatar-4.jpg&w=48&q=75
-                                    "
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <h6 class="mb-0">Jason Doe</h6>
-                        </div>
-                        <div
-                          class="
-                            d-flex
-                            align-items-center
-                            flex-column flex-xl-row
-                            text-center text-md-left
-                            col-xl-9
-                          "
-                        >
-                          <div
-                            class="
-                              bg-gray-200
-                              rounded-pill
-                              px-4
-                              py-1
-                              me-0 me-xl-3
-                              mt-2 mt-xl-0
-                              text-sm text-dark
-                              exclude
-                            "
-                          >
-                            User testing
-                          </div>
-                          <p class="mb-0 mt-3 mt-lg-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit..
-                          </p>
-                        </div>
-                      </div>
-                    </div></a
-                  >
-                </div>
-              </div>
-            </section>
-            <section class="mb-4">
-              <h2 class="section-heading section-heading-ms mb-4 mb-lg-5">
+              <h2 class="section-heading section-heading-ms fs-4 mb-4 mb-lg-5">
                 Productos 🛍️
               </h2>
               <div class="row g-1">
@@ -1334,7 +422,9 @@
                   <div class="card-body">
                     <form class="my-0 py-3" id="formProducto">
                       <div class="mb-3">
-                        <label for="codigo" class="form-label">ID Producto</label>
+                        <label for="codigo" class="form-label"
+                          >ID Producto</label
+                        >
                         <input
                           type="text"
                           class="form-control"
@@ -1391,7 +481,7 @@
                           min="1"
                         />
                         <div class="invalid-feedback">
-                          Este campo es obligatorio 
+                          Este campo es obligatorio
                         </div>
                       </div>
                       <div class="mb-3">
@@ -1418,10 +508,10 @@
                         <button type="submit" class="btn btn-primary">
                           Guardar
                         </button>
+                      </div>
                     </form>
                   </div>
-                </div>
-                <div class="card-footer"></div>
+                  <div class="card-footer"></div>
                 </div>
                 <div class="card-table card mb-lg-0 col-lg-7 offset-lg-1 mb-4">
                   <div class="py-4 card-header">
@@ -1433,7 +523,7 @@
                         Agregar
                       </button>
                     </div>
-                    <div class="table-responsive d-flex  flex-wrap">
+                    <div class="table-responsive d-flex flex-wrap">
                       <table
                         id="myTable"
                         class="
@@ -1496,9 +586,21 @@
 
     <!-- chart js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <!-- bootstrap js -->
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
+    <!-- jquery -->
     <script src="/js/jquery-3.6.0.min.js"></script>
+    <!-- ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- my scripts -->
     <script src="/js/sidebarAndTooltip.js"></script>
     <script type="module" src="/js/admin.js"></script>
     <script src="/js/charts.js"></script>
