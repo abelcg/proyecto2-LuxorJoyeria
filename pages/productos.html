@@ -6,7 +6,7 @@
     <meta name="description" content="dashboard" />
     <meta name="author" content="Abel Córdoba González" />
     <meta name="keywords" content="crud, localstorage, dahsboard" />
-    <title>Luxor Dashboard</title>
+    <title>Productos</title>
     <!-- Boxicons -->
     <link
       href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
@@ -109,7 +109,7 @@
             <li>
               <a
                 id="btnProductos"
-                href="/pages/productos.html"
+                href="#productos"
                 data-bs-toggle="tooltip"
                 data-bs-placement="right"
                 title="Productos"
@@ -188,7 +188,7 @@
         </div>
         <div class="page-holder bg-gray-100">
           <div class="px-lg-4 px-xl-5 container-fluid" id="page-container">
-            <section class="mb-3 mb-lg-5">
+          <!--   <section class="mb-3 mb-lg-5">
               <div class="row">
                 <div class="mb-4 col-xl-3 col-md-6">
                   <div class="card-widget h-100">
@@ -410,13 +410,73 @@
                   </div>
                 </div>
               </div>
-            </section>
-         <!--    <section class="mb-4">
-              <h2 class="section-heading section-heading-ms fs-4 mb-4 mb-lg-5">
+            </section> -->
+            <section class="mb-4">
+              <h2 class="section-heading section-heading-ms fs-4 mb-4 mb-lg-4">
                 Productos 🛍️
               </h2>
-              <div class="row g-1">
-                <div class="card mb-4 mb-lg-0 col-lg-4">
+              <div class="row d-flex justify-content-between">
+                <div class="card-table card mb-lg-0 col-lg-12 mb-4 mt-2">
+                    <div class="py-4 card-header">
+                      <h2 class="card-heading">Productos</h2>
+                    </div>
+                    <div class="card-body px-0">
+                      <div class="text-end">
+                        <button class="btn btn-primary my-4" id="btn-agregar">
+                          Agregar
+                        </button>
+                      </div>
+                      <div class="table-responsive d-flex flex-column flex-wrap">
+                        <table
+                          id="myTable"
+                          class="
+                            text-center
+                            mb-0
+                            table
+                            table-borderless
+                            table-hover
+                            table-light
+                            table-striped
+                            w-100
+                          "
+                        >
+                          <thead class="table-dark text-light">
+                            <tr>
+                              <th>ID PRODUCTO</th>
+                              <th>NOMBRE</th>
+                              <th>DESCRIPCION</th>
+                              <th>PRECIO</th>
+                              <th>STOCK</th>
+                              <th>ÚLTIMA ORDEN</th>
+                              <th>ACCIONES</th>
+                            </tr>
+                          </thead>
+                          <tbody id="tablaProductos"></tbody>
+                          <tfoot>
+                            <tr>
+                              <th>ID PRODUCTO</th>
+                              <th>NOMBRE</th>
+                              <th>DESCRIPCION</th>
+                              <th>PRECIO</th>
+                              <th>STOCK</th>
+                              <th>ÚLTIMA ORDEN</th>
+                              <th>ACCIONES</th>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="card-footer"></div>
+                  </div>
+                  <div class="card mb-4 mb-lg-2 col-lg-5 mt-lg-4" id="productCard">
+                    <div class="py-4 card-header">
+                      <h4 class="card-heading">Vista general del producto</h4>
+                    </div>
+                    <div class="card-body" id="vistaProducto">
+                    </div>
+                    <div class="card-footer"></div>
+                  </div>
+                <div class="card mb-4 mb-lg-2 col-lg-12 mt-lg-4" id="productForm">
                   <div class="py-4 card-header">
                     <h4 class="card-heading">Cargar productos</h4>
                   </div>
@@ -441,6 +501,21 @@
                         <div class="valid-feedback">Este campo es correcto</div>
                       </div>
                       <div class="mb-3">
+                        <label for="URL de la imagen" class="form-label">URL</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="URL"
+                          aria-describedby="URL"
+                          placeholder="https://www..."
+                          required
+                          maxlength="80"
+                        />
+                        <div class="invalid-feedback">
+                          Este campo es obligatorio
+                        </div>
+                      </div>
+                      <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
                         <input
                           type="text"
@@ -449,8 +524,22 @@
                           aria-describedby="nombre"
                           placeholder="Mouse Logitec"
                           required
-                          maxlength="20"
+                          maxlength="50"
                         />
+                        <div class="invalid-feedback">
+                          Este campo es obligatorio
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="Descripción" class="form-label">Descripción</label>
+                        <textarea
+                          type="text-area"
+                          class="form-control"
+                          id="descripcion"
+                          aria-describedby="descripción"
+                          rows="3"
+                          placeholder="Descripción del producto"
+                        ></textarea>
                         <div class="invalid-feedback">
                           Este campo es obligatorio
                         </div>
@@ -506,66 +595,16 @@
                         Debe completar todos los datos
                       </div>
                       <div class="text-end mt-4">
-                        <button type="submit" class="btn btn-primary">
-                          Guardar
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="card-footer"></div>
-                </div>
-                <div class="card-table card mb-lg-0 col-lg-7 offset-lg-1 mb-4">
-                  <div class="py-4 card-header">
-                    <h2 class="card-heading">Productos</h2>
-                  </div>
-                  <div class="card-body">
-                    <div class="text-end">
-                      <button class="btn btn-primary my-4" id="btn-agregar">
-                        Agregar
-                      </button>
+                          <button type="submit" class="btn btn-primary">
+                            Guardar
+                          </button>
                     </div>
-                    <div class="table-responsive d-flex flex-wrap">
-                      <table
-                        id="myTable"
-                        class="
-                          text-center
-                          mb-0
-                          table
-                          table-borderless
-                          table-hover
-                          table-light
-                          table-striped
-                          w-100
-                        "
-                      >
-                        <thead class="table-dark text-light">
-                          <tr>
-                            <th>ID PRODUCTO</th>
-                            <th>NOMBRE</th>
-                            <th>PRECIO</th>
-                            <th>STOCK</th>
-                            <th>ÚLTIMA ORDEN</th>
-                            <th>ACCIONES</th>
-                          </tr>
-                        </thead>
-                        <tbody id="tablaProductos"></tbody>
-                        <tfoot>
-                          <tr>
-                            <th>ID PRODUCTO</th>
-                            <th>NOMBRE</th>
-                            <th>PRECIO</th>
-                            <th>STOCK</th>
-                            <th>ÚLTIMA ORDEN</th>
-                            <th>ACCIONES</th>
-                          </tr>
-                        </tfoot>
-                      </table>
-                    </div>
+                </form>
                   </div>
                   <div class="card-footer"></div>
                 </div>
               </div>
-            </section> -->
+            </section> 
           </div>
           <footer
             class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100"

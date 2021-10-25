@@ -1,15 +1,12 @@
 // defino las funciones de validaciones
 
 export function validarCampoRequerido(input) {
-    // console.log(input);
     console.log(input.value);
   
     if (input.value.trim().length > 0 && input.value.trim().length >= 3) {
-      console.log("el dato es correcto");
       input.className = "form-control is-valid";
       return true;
     } else {
-      console.log("dato erroneo");
       input.className = "form-control is-invalid";
       return false;
     }
@@ -50,15 +47,29 @@ export function validarID(input) {
         input.className = "form-control is-invalid";
       return false; 
     }
+  }
 
+  export function validarURL(input) {
+    // validar URL con una expresión regular
+    
+    let patron = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
+    if (input.value.trim() != "" && patron.test(input.value.trim())) {
+      input.className = "form-control is-valid";
+      return true;
+    } else {
+      input.className = "form-control is-invalid";
+      return false;
+    }
   }
 
   export function validarGeneral() {
- 
+    console.log('desde validar general')
     let alerta = document.querySelector('#msjAlerta');
     if (
       validarID(document.querySelector("#ID_producto")) &&
+      validarURL(document.querySelector("#URL")) &&
       validarCampoRequerido(document.querySelector("#nombre")) &&
+      validarCampoRequerido(document.querySelector("#descripcion")) &&
       validarNumeros(document.querySelector("#precio")) &&
       validarNumeros(document.querySelector("#stock")) &&
       validarFecha(document.querySelector("#fecha_orden"))

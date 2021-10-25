@@ -304,6 +304,10 @@
   overflow: hidden;
 }
 
+.card-table-img {
+  display: inline-block;
+  width: 40px;
+}
 .card-header {
   position: relative;
   padding: 2rem;
@@ -432,10 +436,25 @@
   background-color: #e9ecef !important;
 }
 
+#productCard { 
+ height:0%;
+ display: none;
+ transition: all 0.2s ease-in-out;
+}
 
+#productCard.show { 
+ height:100%;
+ display: block;
+}
 
 
 /*------ Configuración  de las medias queries ----------*/
+@media (min-width: 992px) {
+  .card-table-img {
+    width: 5rem;
+}
+}
+
 @media (max-width: 420px) {
   .sidebar li .tooltip {
     display: none;
@@ -445,42 +464,31 @@
 /*------ Media Queries para dispositivos extra small ---*/
 @media all and (min-width: 319px) and (max-width: 575px) {
   .sidebar{
-   
     -webkit-transition: all 0.4s ease;
     transition:all 0.4s ease;
   }
   
   .sidebar.show {
     width: 0;
-    
-    
    }
    
    .sidebar.shrink {
     width: 0;
-    
-    
    }
 }
 
 /* ----------- Samsung Galaxy-Fold----------- */
 @media (max-device-width: 280px) and (max-device-height: 653px) {
   .sidebar{
-   
     -webkit-transition: all 0.4s ease;
     transition:all 0.4s ease;
   }
   
   .sidebar.show {
     width: 0;
-    
-    
    }
    
    .sidebar.shrink {
-    width: 0;
-    
-    
+    width: 0; 
    }
-
 }

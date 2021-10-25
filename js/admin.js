@@ -4,22 +4,24 @@ import {
   validarID,
   validarNumeros,
   validarFecha,
+  validarURL,
 } from "./validaciones.js";
 
 import { Producto } from "./producto.js";
 
- 
 // declaro variables
 let productos = [];
 let productoExistente = false; //variable bandera: false significa q tengo que agregar un producto nuevo, true -> tengo que modificar uno existente
 let idProducto = document.querySelector("#ID_producto");
+let urlProducto = document.querySelector("#URL");
 let nombreProducto = document.querySelector("#nombre");
+let descripcionProducto = document.querySelector("#descripcion");
 let precioProducto = document.querySelector("#precio");
 let stockDisponible = document.querySelector("#stock");
 let ultimaOrden = document.querySelector("#fecha_orden");
 let formularioProducto = document.querySelector("#formProducto");
 let btnAgregar = document.querySelector("#btn-agregar");
-
+let btnProductos = document.getElementById("btnProductos");
 //inicializo la dataTable
 let dataTable = new simpleDatatables.DataTable("#myTable", {
   searchable: true,
@@ -38,8 +40,14 @@ let dataTable = new simpleDatatables.DataTable("#myTable", {
 idProducto.addEventListener("blur", () => {
   validarID(idProducto);
 });
+urlProducto.addEventListener("blur", () => {
+  validarURL(urlProducto);
+});
 nombreProducto.addEventListener("blur", () => {
   validarCampoRequerido(nombreProducto);
+});
+descripcionProducto.addEventListener("blur", () => {
+  validarCampoRequerido(descripcionProducto);
 });
 precioProducto.addEventListener("blur", () => {
   validarNumeros(precioProducto);
@@ -52,6 +60,8 @@ ultimaOrden.addEventListener("blur", () => {
 });
 formularioProducto.addEventListener("submit", guardarProducto);
 btnAgregar.addEventListener("click", limpiarFormulario);
+btnProductos.addEventListener("click", cargarDatosPrueba);
+
 //llamo a la funcion que recupera los datos del localStorage
 cargaInicial();
 
@@ -59,18 +69,20 @@ cargaInicial();
 function agregarProducto() {
   let nuevoProducto = new Producto(
     idProducto.value,
+    urlProducto.value,
     nombreProducto.value,
+    descripcionProducto.value,
     precioProducto.value,
     stockDisponible.value,
     ultimaOrden.value
   );
 
   console.log(nuevoProducto);
-  // Para evitar ingreso de un productos con ID repetidos creo un array vacio. 
+  // Para evitar ingreso de un productos con ID repetidos creo un array vacio.
   let array = [];
   //Guardo el objeto producto en el array a comparar
   array.push(nuevoProducto);
-  // Para cada dato del array comparo con cada item de la lista de productos 
+  // Para cada dato del array comparo con cada item de la lista de productos
   array.forEach((dato) => {
     //Si no encuentra algún elemento con el mismo id como propiedad
     if (!productos.find((item) => item.id === dato.id)) {
@@ -91,7 +103,7 @@ function agregarProducto() {
     } else {
       // limpiar el formulario
       limpiarFormulario();
-       //mostar un mensaje al usuario
+      //mostar un mensaje al usuario
       Swal.fire({
         icon: "error",
         title: "Ups...",
@@ -100,7 +112,6 @@ function agregarProducto() {
       });
     }
   });
-
 }
 
 //funcion guardar los datos en la tabla o la actualizo
@@ -141,7 +152,12 @@ function cargaInicial() {
 function crearFila(item) {
   /*  console.log(item); */
   let codigo = item.id;
-  let nombre = item.nombre;
+  // let imagen = item.url;
+  let nombre = `<td class="text-center"><img class="card-table-img img-fluid me-2"
+                src="${item.url}" alt="${item.nombre}" width="80">
+                <a class="text-reset text-center text-decoration-none"  role="button" onclick="mostrarProducto('${item.id}')">
+                <strong>${item.nombre}</strong></a></td>`;
+  let descripcion = item.descripcion;
   let precio = item.precio;
   let stock = item.stock;
   let orden = item.orden;
@@ -190,17 +206,19 @@ function crearFila(item) {
     headings: [
       "ID PRODUCTO",
       "NOMBRE",
+      "DESCRIPCION",
       "PRECIO",
       "STOCK",
       "ÚLTIMA ORDEN",
       "ACCIONES",
     ],
-    data: [["#" + codigo, nombre, "$" + precio, stock, orden, botones]],
+    data: [
+      ["#" + codigo, nombre, descripcion, "$" + precio, stock, orden, botones],
+    ],
   };
 
   // Insert the data
   dataTable.insert(newData);
-
 }
 
 function limpiarFormulario() {
@@ -208,17 +226,21 @@ function limpiarFormulario() {
   formularioProducto.reset();
   // limpia las clases de cada elemento del form
   idProducto.className = "form-control";
+  urlProducto.className = "form-control";
   nombreProducto.className = "form-control";
+  descripcionProducto.className = "form-control";
   precioProducto.className = "form-control";
   stockDisponible.className = "form-control";
   ultimaOrden.className = "form-control";
-
+  
+  // me posiciono en el input de id para comenzar a llenar el formulario
+  idProducto.focus();
+  // cambio el valor de la variable bandera
   productoExistente = false;
 }
 
 //agrego un metodo al objeto window para que la funcion creada sea global y la reconozca el arvhivo tipo kmodulo
 window.edicionProducto = (id) => {
-
   // buscar el objeto dentro del arreglo
   let productoEncontrado = productos.find((item) => {
     return item.id === id;
@@ -226,7 +248,9 @@ window.edicionProducto = (id) => {
   console.log(productoEncontrado);
   //mostrar los datos del objeto en el formulario
   document.querySelector("#ID_producto").value = productoEncontrado.id;
+  document.querySelector("#URL").value = productoEncontrado.url;
   document.querySelector("#nombre").value = productoEncontrado.nombre;
+  document.querySelector("#descripcion").value = productoEncontrado.descripcion;
   document.querySelector("#precio").value = productoEncontrado.precio;
   document.querySelector("#stock").value = productoEncontrado.stock;
   document.querySelector("#fecha_orden").value = productoEncontrado.orden;
@@ -258,8 +282,11 @@ function actualizarProducto() {
       console.log(productos[indiceProducto].nombre);
 
       // actualizar los valores del objeto encontrado dentro de mi arreglo
+      productos[indiceProducto].url = document.querySelector("#URL").value;
       productos[indiceProducto].nombre =
         document.querySelector("#nombre").value;
+      productos[indiceProducto].descripcion =
+        document.querySelector("#descripcion").value;
       productos[indiceProducto].precio =
         document.querySelector("#precio").value;
       productos[indiceProducto].stock = document.querySelector("#stock").value;
@@ -297,6 +324,7 @@ function borrarFilas() {
     headings: [
       "ID PRODUCTO",
       "NOMBRE",
+      "DESCRIPCION",
       "PRECIO",
       "STOCK",
       "ÚLTIMA ORDEN",
@@ -348,4 +376,126 @@ window.eliminarProducto = (id) => {
       );
     }
   });
+};
+
+function cargarDatosPrueba() {
+  const datos = [
+    {
+      id: "001",
+      url: "https://ss-static-01.esmsv.com/id/147268/productos/obtenerimagen/?id=4999&useDensity=false&width=1280&height=720&tipoEscala=fit",
+      nombre: "Anillo de plata",
+      descripcion: "Labradorita en Plata 925",
+      precio: "5.500",
+      stock: "10",
+      orden: "2021-08-11",
+    },
+    {
+      id: "002",
+      url: "https://ss-static-01.esmsv.com/id/147268/productos/obtenerimagen/?id=5962&useDensity=false&width=1280&height=720&tipoEscala=fit",
+      nombre: "Collar pectoral",
+      descripcion: "Collar de acero de fundición con Rodocrosita",
+      precio: "5.600",
+      stock: "2",
+      orden: "2021-04-05",
+    },
+    {
+      id: "003",
+      url: "https://ss-static-01.esmsv.com/id/147268/productos/obtenerimagen/?id=5942&useDensity=false&width=1280&height=720&tipoEscala=fit",
+      nombre: "Aros y dijes de plata",
+      descripcion: "Aro y dijes de plata con cristales",
+      precio: "3.990",
+      stock: "10",
+      orden: "2021-08-11",
+    },
+    {
+      id: "004",
+      url: "https://ss-static-01.esmsv.com/id/147268/productos/obtenerimagen/?id=4999&useDensity=false&width=1280&height=720&tipoEscala=fit",
+      nombre: "Anillo de plata",
+      descripcion: "Labradorita en Plata 925",
+      precio: "5.500",
+      stock: "10",
+      orden: "2021-08-11",
+    },
+    {
+      id: "005",
+      url: "https://ss-static-01.esmsv.com/id/147268/productos/obtenerimagen/?id=6034&useDensity=false&width=1280&height=720&tipoEscala=fit",
+      nombre: "Dije de plata",
+      descripcion: "Mega dije de plata y amatista",
+      precio: "1.590",
+      stock: "1",
+      orden: "2020-11-21",
+    },
+    {
+      id: "006",
+      url: "https://ss-static-01.esmsv.com/id/147268/productos/obtenerimagen/?id=5840&useDensity=false&width=1280&height=720&tipoEscala=fit",
+      nombre: "Collar de plata con dije",
+      descripcion: "Collar de plata 925 con dije corazon",
+      precio: "4.990",
+      stock: "5",
+      orden: "2021-10-15",
+    },
+    {
+      id: "007",
+      url: "https://ss-static-01.esmsv.com/id/147268/productos/obtenerimagen/?id=5472&useDensity=false&width=1280&height=720&tipoEscala=fit",
+      nombre: "Dije de plata",
+      descripcion: "Dije de plta hijo",
+      precio: "3.000",
+      stock: "15",
+      orden: "2021-10-20",
+    },
+  ];
+
+  if (!localStorage.getItem("productos")) {
+    // quiero agregar los datos de productos
+    console.log("cargar datos prueba");
+    productos = datos;
+    localStorage.setItem("productos", JSON.stringify(datos));
+    //mostar en la tabla
+    productos.forEach((item) => {
+      crearFila(item);
+    });
+  } else {
+    //no quiero hacer nada
+  }
+}
+
+window.mostrarProducto = (id) => {
+
+  // buscar el objeto dentro del arreglo
+  let productoEncontrado = productos.find((item) => {
+    return item.id === id;
+  });
+  let productForm = document.querySelector("#productForm");
+  let productCard = document.querySelector("#productCard");
+  productCard.classList.toggle("show");
+  if (productCard.classList.contains("show")) {
+    productForm.className ="card mb-4 mb-lg-2 col-lg-6 mt-lg-4";
+  } else {
+    productForm.className = "card mb-4 mb-lg-2 col-lg-12 mt-lg-4"; 
+  }
+  let vistaProducto = document.getElementById("vistaProducto");
+  if (vistaProducto.hasChildNodes() && vistaProducto.children.length > 0) {
+
+    vistaProducto.removeChild(vistaProducto.firstChild);
+    
+  } else {
+    
+    let cardProducto = ` <div class="text-center rounded">
+    <img class="w-50 h-auto" src="${productoEncontrado.url}" alt="${productoEncontrado.nombre}" >
+    <h5 class="my-5"><strong>${productoEncontrado.nombre}</strong> </h5>
+    <p class="lead mb-3">${productoEncontrado.descripcion}</p>
+    <p class="lead fw-bold">$${productoEncontrado.precio}</p>
+    <h6 class="my-4"><strong>Review</strong> </h6>
+    <div class="d-flex flex-nowrap justify-content-center">
+     <i class="bi bi-star-fill text-warning me-1"></i>
+     <i class="bi bi-star-fill  text-warning ms-1"></i>
+     <i class="bi bi-star-fill text-warning ms-1"></i>
+     <i class="bi bi-star-fill text-warning ms-1"></i>
+     <i class="bi bi-star-fill text-secondary ms-1"></i>
+    </div>
+  </div>`;
+  
+   vistaProducto.innerHTML += cardProducto;
+    
+  }
 };
