@@ -54,7 +54,6 @@
   height: 60px;
   display: flex;
   align-items: center;
-  /* position: relative; */
 }
 .sidebar .logo-details .icon {
   opacity: 0;
@@ -72,13 +71,10 @@
   opacity: 1;
 }
 #btn {
-  /* position: absolute;
-  top: 50%;
-  left: 0; */
+  
   margin-top: 15px;
   margin-left: 15px;
   transform: translateY(-50%);
-  /* font-size: 22px; */
   transition: all 0.4s ease;
   font-size: 28px;
   text-align: center;
@@ -103,7 +99,6 @@
   height: 100%;
 }
 .sidebar li {
-  /* position: relative; */
   margin: 8px 0;
   list-style: none;
 }
@@ -190,6 +185,33 @@
 
 .bg-gray-100 {
   background-color: #f8f9fa !important;
+}
+
+#myChart {
+  display: block;
+  box-sizing: border-box;
+  height: 354px;
+  width: 711px;
+}
+
+.donutChart {
+  display: block;
+  box-sizing: border-box;
+  height: 195px;
+  width: 390px; 
+}
+
+#bar-chart{
+  display: block;
+  box-sizing: border-box;
+  height: 354px;
+  width: 711px;
+}
+#radar-chart{
+  display: block;
+  box-sizing: border-box;
+  height: 195px;
+  width: 390px;
 }
 
 .card-widget,
@@ -282,6 +304,10 @@
   overflow: hidden;
 }
 
+.card-table-img {
+  display: inline-block;
+  width: 40px;
+}
 .card-header {
   position: relative;
   padding: 2rem;
@@ -306,7 +332,7 @@
 
 .card-body {
   flex: 1 1 auto;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 .card-footer, .card-header {
   padding: 1rem 2rem;
@@ -410,8 +436,59 @@
   background-color: #e9ecef !important;
 }
 
+#productCard { 
+ height:0%;
+ display: none;
+ transition: all 0.2s ease-in-out;
+}
+
+#productCard.show { 
+ height:100%;
+ display: block;
+}
+
+
+/*------ Configuración  de las medias queries ----------*/
+@media (min-width: 992px) {
+  .card-table-img {
+    width: 5rem;
+}
+}
+
 @media (max-width: 420px) {
   .sidebar li .tooltip {
     display: none;
   }
+}
+
+/*------ Media Queries para dispositivos extra small ---*/
+@media all and (min-width: 319px) and (max-width: 575px) {
+  .sidebar{
+    -webkit-transition: all 0.4s ease;
+    transition:all 0.4s ease;
+  }
+  
+  .sidebar.show {
+    width: 0;
+   }
+   
+   .sidebar.shrink {
+    width: 0;
+   }
+}
+
+/* ----------- Samsung Galaxy-Fold----------- */
+@media (max-device-width: 280px) and (max-device-height: 653px) {
+  .sidebar{
+    -webkit-transition: all 0.4s ease;
+    transition:all 0.4s ease;
+  }
+  
+  .sidebar.show {
+    width: 0;
+   }
+   
+   .sidebar.shrink {
+    width: 0; 
+   }
 }
