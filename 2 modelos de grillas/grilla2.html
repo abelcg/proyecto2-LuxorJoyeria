@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Joyería, catalogo de joyas" />
+    <meta name="author" content="Abel Córdoba González" />
+    <meta name="keywords" content="joyas, joyería, venta por catalogo" />
+    <title>Luxor Joyas</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+    <link rel="manifest" href="/img/manifest.json" />
+    <link rel="stylesheet" href="grilla2.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
+    <!-- css principal -->
+    <link href="/css/style.css" rel="stylesheet" />
+    <!-- sweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body id="body">
+    <header>
+        <nav class="
+          px-4
+          py-2
+          shadow
+          navbar navbar-expand-lg
+          bg-gradient
+          overflow-hidden
+        ">
+            <div class="container-fluid">
+                <a class="navbar-brand text-secondary" href="index.html">
+                    <img src="/img/SeekPng.com_crazy-diamond-png_2009056.png"
+                        alt="logo de la joyeria Luxor diamante de oro " width="50"
+                        class="rounded-circle d-inline-block align-text-center" />
+                    Luxor Joyas
+                </a>
+                <ul class="navbar-nav ms-auto d-flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary fs-5 mx-3" href="/pages/admin.html">Admin
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary fs-2 mx-3" href="#"><i class="bx bx-heart"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary fs-2 ms-2" href="#"><i class="bx bx-log-in"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-fluid align-items-stretch">
+            <div class="page-holder bg-gray-100">
+                <div class="px-lg-4 px-xl-5 container-fluid">
+                    <section class="mb-4">
+                        <h2 class="section-heading section-heading-ms m-5 text-center">
+                            Catálogo de productos 💍
+                        </h2>
+                        <div class="container">
+                            <div class="card shadow">
+                                <div class="imgBx">
+                                    <img src="https://www.fasanellijoyas.com.ar/assets/fotos/162-T1064171103100B-60b831d928971.jpg"
+                                        alt="reloj oro blanco">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Añadir a lista de deseos</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Añadir al carrito</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>Ver detalles</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content mt-auto">
+                                    <div class="productName">
+                                        <h3>Reloj de oro blanco virola azul hombre</h3>
+                                    </div>
+                                    <div class="price_rating">
+                                        <h2>$30.000</h2>
+                                        <div class="star mt-3 align-items-center">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa grey fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow">
+                                <div class="imgBx">
+                                    <img src="https://www.mercasist.com/lib/urlPic.php?size=500&fondo=trans&url=https://mercasist-ml-items-pics.s3.us-east-2.amazonaws.com/760981b6d7e4f5db1afdb51ed4de0360"
+                                        alt="collar de caballo colgante">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Añadir a lista de deseos</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Añadir al carrito</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>Ver detalles</span>
+                                        </li>
+                                </div>
+                                <div class="content mt-auto">
+                                    <div class="productName">
+                                        <h3>Collar de Caballo Colgante de animales de plata esteerlina Joyas de Corazón de oro blanco de 18 k</h3>
+                                    </div>
+                                    <div class="price_rating">
+                                        <h2>$161.999,00</h2>
+                                        <div class="star mt-3 align-items-center">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa grey fa-star"></i>
+                                            <i class="fa grey fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow">
+                                <div class="imgBx">
+                                    <img src="https://image.freepik.com/vector-gratis/collares-cadena-oro-engastados-colgantes-diamantes-redondos-corazon-joyas_100011-497.jpg"
+                                        alt="Collar de cadena de oro">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Añadir a lista de deseos</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Añadir al carrito</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>Ver detalles</span>
+                                        </li>
+                                </div>
+                                <div class="content mt-auto">
+                                    <div class="productName">
+                                        <h3>Collar de cadena de oro engastados con colgantes de diamantes redondos y corazón</h3>
+                                    </div>
+                                    <div class="price_rating">
+                                        <h2>$79.000,00</h2>
+                                        <div class="star mt-3 align-items-center">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa grey fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow">
+                                <div class="imgBx">
+                                    <img src="https://img.bestdealplus.com/ae04/kf/HTB1sL0.Xc_vK1Rjy0Foq6xIxVXaD.jpg_350x350.jpg"
+                                        alt="colgante de metal chapado en oro">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Añadir a lista de deseos</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Añadir al carrito</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>Ver detalles</span>
+                                        </li>
+                                </div>
+                                <div class="content mt-auto">
+                                    <div class="productName">
+                                        <h3>Colgante de metal chapado en oro, accesorio para pendientes</h3>
+                                    </div>
+                                    <div class="price_rating">
+                                        <h2>$40.999,00</h2>
+                                        <div class="star mt-3 align-items-center">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa grey fa-star"></i>
+                                            <i class="fa grey fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow">
+                                <div class="imgBx">
+                                    <img src="https://i.pinimg.com/474x/37/66/34/3766343a631bfea083c5eb643afe20ab.jpg"
+                                        alt="anillos de compromiso">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Añadir a lista de deseos</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Añadir al carrito</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>Ver detalles</span>
+                                        </li>
+                                </div>
+                                <div class="content mt-auto">
+                                    <div class="productName">
+                                        <h3>anillos de compromiso de oro blanco con piedras </h3>
+                                    </div>
+                                    <div class="price_rating">
+                                        <h2>$150.000,00</h2>
+                                        <div class="star mt-3 align-items-center">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa grey fa-star"></i>
+                                            <i class="fa grey fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow">
+                                <div class="imgBx">
+                                    <img src="https://musswatch.com/blog/wp-content/uploads/2018/06/la-finesse-oro-amarillo-blanco.jpg"
+                                        alt="reloj dorado de mujer">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Añadir a lista de deseos</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Añadir al carrito</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>Ver detalles</span>
+                                        </li>
+                                </div>
+                                <div class="content mt-auto">
+                                    <div class="productName">
+                                        <h3>Reloj dorado de mujer </h3>
+                                    </div>
+                                    <div class="price_rating">
+                                        <h2>$50.000,00</h2>
+                                        <div class="star mt-3 align-items-center">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa grey fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow">
+                                <div class="imgBx">
+                                    <img src="https://mrslooks.com/wp-content/uploads/2016/12/2-3-300x300.jpg"
+                                        alt="collar de mujer">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Añadir a lista de deseos</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Añadir al carrito</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>Ver detalles</span>
+                                        </li>
+                                </div>
+                                <div class="content mt-auto">
+                                    <div class="productName">
+                                        <h3>Collar de oro blanco </h3>
+                                    </div>
+                                    <div class="price_rating">
+                                        <h2>$150.000,00</h2>
+                                        <div class="star mt-3 align-items-center">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa grey fa-star"></i>
+                                            <i class="fa grey fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow">
+                                <div class="imgBx">
+                                    <img src="https://joya36.com/10865-home_default/gargantilla-en-oro-de-18-quilates.jpg"
+                                        alt="gargantilla de oro">
+                                    <ul class="action">
+                                        <li>
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            <span>Añadir a lista de deseos</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <span>Añadir al carrito</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>Ver detalles</span>
+                                        </li>
+                                </div>
+                                <div class="content mt-auto">
+                                    <div class="productName">
+                                        <h3>Gargantilla de oro </h3>
+                                    </div>
+                                    <div class="price_rating">
+                                        <h2>$15.000,00</h2>
+                                        <div class="star mt-3 align-items-center">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa grey fa-star"></i>
+                                            <i class="fa grey fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="py-2 bg-gradient overflow-hidden text-center shadow mt-auto">
+        <section class="container-fluid">
+            <article class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4 mt-0 pt-0">
+                    <div class="nav d-flex align-items-center justify-content-center">
+                        <a class="nav-link active text-secondary px-0" aria-current="page" href="/index.html">
+                            <img src="/img/SeekPng.com_crazy-diamond-png_2009056.png"
+                                alt="logo de la joyeria Luxor diamante de oro" width="60" height="auto" />Luxor
+                            Joyas</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 text-secondary mb-3 text-center">
+                    <ul class="
+                      nav
+                      flex-column
+                      align-items-center
+                      justify-content-center
+                      fs-5
+                    ">
+                        <li class="nav-item">
+                            <a class="nav-link active text-secondary" aria-current="page" href="/index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="#">¿quienes somos?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="/pages/404.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 text-center">
+                    <h5 class="text-center px-0 mx-0">Seguinos</h5>
+                    <ul class="nav align-items-center justify-content-center fs-6">
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary pe-1" href="https://m.facebook.com/?locale=es_ES"
+                                target="_blank">
+                                <svg xmlns=" http://www.w3.org/2000/svg " width="24 " height="24 " viewBox="0 0 24 24 ">
+                                    <path
+                                        d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508
+                                  1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z ">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary pe-1" href="https://twitter.com/login?lang=es"
+                                target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary pe-2" href="https://www.youtube.com" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary pe-2" href="https://www.instagram.com/?hl=es-la"
+                                target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20.947 8.305a6.53 6.53 0 0 0-.419-2.216 4.61 4.61 0 0 0-2.633-2.633 6.606 6.606 0 0 0-2.186-.42c-.962-.043-1.267-.055-3.709-.055s-2.755 0-3.71.055a6.606 6.606 0 0 0-2.185.42 4.607 4.607 0 0 0-2.633 2.633 6.554 6.554 0 0 0-.419 2.185c-.043.963-.056 1.268-.056 3.71s0 2.754.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.043 1.268.056 3.71.056s2.755 0 3.71-.056a6.59 6.59 0 0 0 2.186-.419 4.615 4.615 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.187.043-.962.056-1.267.056-3.71-.002-2.442-.002-2.752-.058-3.709zm-8.953 8.297c-2.554 0-4.623-2.069-4.623-4.623s2.069-4.623 4.623-4.623a4.623 4.623 0 0 1 0 9.246zm4.807-8.339a1.077 1.077 0 0 1-1.078-1.078 1.077 1.077 0 1 1 2.155 0c0 .596-.482 1.078-1.077 1.078z">
+                                    </path>
+                                    <circle cx="11.994" cy="11.979" r="3.003"></circle>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <p class="my-2">&copy;JoyeriaLuxor2021</p>
+        </section>
+    </footer>
+    <!-- chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/sidebarAndTooltip.js"></script>
+    <script type="module" src="/js/admin.js"></script>
+    <script src="/js/charts.js"></script>
+</body>
+
+</html>
