@@ -27,29 +27,6 @@
   text-align: center;
 }
 
-
-/* @media (max-width: 1199.98px) {
-  .sidebar {
-    overflow: hidden;
-    width: 1.6rem;
-    margin-left: -6rem;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-    text-align: center;
-  }
-
-  .sidebar.shrink {
-    width: 1.6rem;
-    text-align: center;
-  }
-
-  .sidebar.show {
-    width: 20vw;
-    height: auto;
-  }
-} */
-
-
 .sidebar .logo-details {
   height: 60px;
   display: flex;
@@ -102,39 +79,6 @@
   margin: 8px 0;
   list-style: none;
 }
-/* .sidebar li .tooltip{
-  position: relative;
-  top: -20px;
-  left: calc(100% + 35px);
-  z-index: 3;
-  background: rgb(240, 11, 11);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 15px;
-  font-weight: 400;
-  opacity: 1;
-  white-space: nowrap;
-  pointer-events: none;
-  transition: 0s;
-}
-.sidebar li:hover .tooltip{
-  opacity: 1;
-  pointer-events: auto;
-  transition: all 0.4s ease;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.sidebar.show li .tooltip{
-  display: none;
-}  */
-
-/* .tooltip .tooltip-inner {
-  background-color:#2fa5fb;
-}
-.tooltip.left .tooltip-arrow{
-  border-left-color:#F00!important;
-} */
 
 .sidebar li a {
   display: flex;
@@ -306,7 +250,8 @@
 
 .card-table-img {
   display: inline-block;
-  width: 40px;
+  width: 100%;
+  height: auto;
 }
 .card-header {
   position: relative;
@@ -451,7 +396,8 @@
 /*------ Configuración  de las medias queries ----------*/
 @media (min-width: 992px) {
   .card-table-img {
-    width: 5rem;
+    width: 100%;
+    height:auto;
 }
 }
 
