@@ -176,9 +176,11 @@
             <li>
               <a
                 href="#"
+                id="log-out"
                 data-bs-toggle="tooltip"
                 data-bs-placement="right"
                 title="Log Out"
+                onclick="adminLogout()"
               >
                 <i class="bx bx-log-out" id="log_out"></i>
                 <span class="links_name">Log Out</span>
@@ -401,6 +403,7 @@
       </div>
     </main>
 
+    
     <!-- chart js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <!-- bootstrap js -->
@@ -418,8 +421,9 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <!-- my scripts -->
-    <script src="/js/sidebarAndTooltip.js"></script>
+    <script type="module" src="/js/session.js"></script>
     <script type="module" src="/js/admin.js"></script>
+    <script src="/js/sidebarAndTooltip.js"></script>
     <script src="/js/charts.js"></script>
    <!--  <script src="/js/sidebarActions.js"></script> -->
   </body>

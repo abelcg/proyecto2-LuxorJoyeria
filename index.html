@@ -8,10 +8,26 @@
     <meta name="keywords" content="joyas, joyería, venta por catalogo" />
     <title>Luxor Joyas</title>
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/img/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/img/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/img/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/img/apple-icon-76x76.png"
+    />
     <link
       rel="apple-touch-icon"
       sizes="114x114"
@@ -43,9 +59,24 @@
       sizes="192x192"
       href="/img/android-icon-192x192.png"
     />
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/img/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon-16x16.png"
+    />
     <link rel="manifest" href="/img/manifest.json" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png" />
@@ -55,6 +86,11 @@
       href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <!-- script de fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/844be37ca0.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <link
@@ -63,6 +99,8 @@
     />
     <!-- css principal -->
     <link href="/css/style.css" rel="stylesheet" />
+    <!-- css admin -->
+    <link href="/css/admin.css" rel="stylesheet" />
     <!-- sweetAlert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
@@ -92,19 +130,43 @@
             <li class="nav-item">
               <a
                 class="nav-link text-secondary fs-5 mx-3"
+                id="admin-btn"
                 href="/pages/admin.html"
-                >Admin
+                ><!-- Admin -->
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary fs-2 mx-3" href="#"
-                ><i class="bx bx-heart"></i
-              ></a>
+              <a
+                class="nav-link text-secondary fs-2 mx-3 btn"
+                id="favorites-btn"
+                role="button"
+                type="button"
+                ><!-- <i class="bx bx-heart"></i> --></a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary fs-2 ms-2" href="#"
-                ><i class="bx bx-log-in"></i
-              ></a>
+              <a
+                class="nav-link text-secondary fs-2 ms-2 btn"
+                title="LogOut"
+                id="logout-btn"
+                role="button"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#signin-modal"
+                onclick="logout()"
+                ><!-- <i class="bx bx-log-out"></i> --></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-secondary fs-2 ms-2 btn"
+                id="login-btn"
+                role="button"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#signin-modal"
+                ><!-- <i class="bx bx-log-in"></i> --></a
+              >
             </li>
           </ul>
         </div>
@@ -115,9 +177,15 @@
         <div class="page-holder bg-gray-100">
           <div class="px-lg-4 px-xl-5 container-fluid">
             <section class="mb-4">
-              <h2 class="section-heading section-heading-ms m-5 text-center">
-                Catálogo de productos 💍
+              <h2
+                class="section-heading section-heading-ms m-5 text-center"
+                id="list-title"
+              >
+                <!-- Bienvenidos a Luxor Joyas -->
               </h2>
+              <h3 class="section-heading section-heading-ms m-5 text-center">
+                Catálogo de productos 💍
+              </h3>
               <div class="row">
                 <div class="col-sm-6">
                   <div class="px-5 py-3 mb-4 card shadow">
@@ -281,6 +349,217 @@
         </div>
       </div>
     </main>
+    <!-- modal login -->
+    <div
+      class="modal fade"
+      id="signin-modal"
+      tabindex="-1"
+      aria-labelledby="signin-modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content card">
+          <div class="modal-header card-header">
+            <ul class="nav nav-tabs card-header-tabs" role="tablist">
+              <li class="nav-item bg-transparent">
+                <a
+                  class="
+                    nav-link
+                    tab-item
+                    fw-medium
+                    active
+                    bg-transparent
+                    border-0
+                  "
+                  href="#signin-tab"
+                  data-bs-toggle="tab"
+                  role="tab"
+                  aria-selected="true"
+                  ><i class="bx bx-log-in me-2 fs-2"></i>Iniciar sesión</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link tab-item fw-medium bg-transparent border-0"
+                  href="#signup-tab"
+                  data-bs-toggle="tab"
+                  role="tab"
+                  aria-selected="false"
+                  ><i class="bx bx-user me-2 fs-2"></i>Regístrate</a
+                >
+              </li>
+            </ul>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body card-body tab-content py-4">
+            <form
+              class="tab-pane fade active show"
+              autocomplete="off"
+              novalidate=""
+              id="signin-tab"
+            >
+              <div class="mb-3">
+                <label class="form-label" for="si-email">Email</label>
+                <input
+                  class="form-control"
+                  type="email"
+                  id="si-email"
+                  placeholder="juanperez@ejemplo.com"
+                  maxlength="30"
+                  required=""
+                />
+                <div class="invalid-feedback">
+                  Por favor ingrese un email valido.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="si-password">Password</label>
+                <div class="password-toggle">
+                  <input
+                    class="form-control"
+                    type="password"
+                    id="si-password"
+                    maxlength="30"
+                    required=""
+                  />
+                  <label
+                    class="password-toggle-btn"
+                    aria-label="Show/hide password"
+                  >
+                    <input
+                      class="password-toggle-check"
+                      id="show-password"
+                      type="checkbox"
+                    /><span class="password-toggle-indicator"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="mb-3 d-flex flex-wrap justify-content-between">
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="si-remember"
+                  />
+                  <label class="form-check-label text-muted" for="si-remember"
+                    >Recuérdame</label
+                  >
+                </div>
+                <a
+                  class="fs-sm text-secondary text-decoration-none btn"
+                  id="recuperarPsw"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Presione para el envio del email de recuperacion"
+                  href="#"
+                  >¿Olvidó su password?</a
+                >
+              </div>
+              <button
+                class="btn btn-pink btn-shadow d-block w-100"
+                type="submit"
+                onsubmit="login()"
+              >
+                Iniciar Sesión
+              </button>
+              <span class="text-danger" id="login-error"></span>
+            </form>
+            <form
+              class="tab-pane fade"
+              autocomplete="off"
+              novalidate=""
+              id="signup-tab"
+            >
+              <div class="mb-3">
+                <label class="form-label" for="su-name">Nombre Completo</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="su-name"
+                  placeholder="Juan Perez"
+                  maxlength="30"
+                  required=""
+                />
+                <div class="invalid-feedback">Por favor ingrese su nombre.</div>
+              </div>
+              <div class="mb-3">
+                <label for="su-email">Email</label>
+                <input
+                  class="form-control"
+                  type="email"
+                  id="su-email"
+                  placeholder="juanperez@ejemplo.com"
+                  maxlength="30"
+                  required=""
+                />
+                <div class="invalid-feedback">
+                  Por favor ingrese un email valido.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="su-password">Password</label>
+                <div class="password-toggle">
+                  <input
+                    class="form-control"
+                    type="password"
+                    id="su-password"
+                    maxlength="30"
+                    required=""
+                  />
+                  <label
+                    class="password-toggle-btn"
+                    aria-label="Show/hide password"
+                  >
+                    <input
+                      class="password-toggle-check"
+                      id="showPassword"
+                      type="checkbox"
+                    /><span class="password-toggle-indicator"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="su-password-confirm"
+                  >Confirmar password</label
+                >
+                <div class="password-toggle">
+                  <input
+                    class="form-control"
+                    type="password"
+                    id="su-password-confirm"
+                    maxlength="30"
+                    required=""
+                  />
+                  <label
+                    class="password-toggle-btn"
+                    aria-label="Show/hide password"
+                  >
+                    <input
+                      class="password-toggle-check"
+                      id="showPassword2"
+                      type="checkbox"
+                    /><span class="password-toggle-indicator"></span>
+                  </label>
+                </div>
+              </div>
+              <button
+                class="btn btn-pink btn-shadow d-block w-100"
+                type="submit"
+                onsubmit="registerUser()"
+              >
+                Regístrate
+              </button>
+              <span class="text-danger" id="register-error"></span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="py-2 bg-gradient overflow-hidden text-center shadow mt-auto">
       <section class="container">
         <article class="row">
@@ -415,10 +694,17 @@
     </footer>
     <!-- chart js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <!-- ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="/js/sidebarAndTooltip.js"></script>
+    <script type="module" src="/js/app.js"></script>
+    <script type="module" src="/js/session.js"></script>
     <script type="module" src="/js/admin.js"></script>
     <script src="/js/charts.js"></script>
   </body>

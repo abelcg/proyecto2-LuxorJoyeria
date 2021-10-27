@@ -22,6 +22,7 @@ let ultimaOrden = document.querySelector("#fecha_orden");
 let formularioProducto = document.querySelector("#formProducto");
 let btnAgregar = document.querySelector("#btn-agregar");
 let btnProductos = document.getElementById("btnProductos");
+
 //inicializo la dataTable
 let dataTable = new simpleDatatables.DataTable("#myTable", {
   searchable: true,
@@ -498,4 +499,10 @@ window.mostrarProducto = (id) => {
    vistaProducto.innerHTML += cardProducto;
     
   }
+};
+
+window.adminLogout = ()=> {
+  localStorage.removeItem('AdminLogged');
+  location.replace('/index.html')
+  //location.reload(); 
 };

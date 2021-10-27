@@ -30,3 +30,103 @@
   background-color: #4650dd;
   border-color: #4650dd;
 }
+
+.btn-pink{
+  color: #fff;
+  background-color: rgb(201, 145, 137);
+  border-color: rgb(201, 145, 137);
+}
+
+.btn-pink:hover{
+  color: #fff;
+  font-weight: bold;
+  background-color:  rgba(88, 78, 114, 0.8);
+  border-color: rgb(88, 75, 122);
+}
+
+.tab-item.active{
+  color: rgb(201, 145, 137)!important;
+  text-align: start;
+  margin-left: 0px;
+  font-size: 1em;
+}
+.tab-item{
+  color: rgb(95, 87, 114);
+  text-align: center;
+}
+.tab-item:hover{
+  color: rgb(183, 125, 187);
+  text-align: center;
+}
+.tab-item::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background:   rgb(183, 125, 187);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.tab-item.active::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background:   rgb(201, 145, 137);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.tab-item:hover::after {
+  width: 100%;
+}
+.tab-item.active:hover::after {
+  width: 100%;
+}
+
+.password-toggle {
+  position: relative;
+}
+
+.password-toggle .form-control {
+  padding-right: 3rem;
+}
+
+.password-toggle-btn .password-toggle-check {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 1rem;
+  height: 1.25rem;
+  opacity: 0;
+}
+.password-toggle-btn {
+  position: absolute;
+  top: 50%;
+  right: .625rem;
+  margin-bottom: 0;
+  padding: .5rem;
+  transform: translateY(-50%);
+  font-size: 1.0625rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.password-toggle-btn .password-toggle-indicator {
+  transition: color .2s ease-in-out;
+  color: #7d879c;
+  font-style: normal;
+}
+
+.password-toggle-btn .password-toggle-indicator::before {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f06e";
+  
+}
+
+.password-toggle-btn .password-toggle-check:checked~.password-toggle-indicator::before {
+  content: "\f070";
+}
+
+ 

@@ -14,40 +14,6 @@ let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   );
 });
 
-/* 
-  console.log(tooltipTriggerList);
-  console.log(tooltipList);
-
-  tooltipTriggerList.addEventListener('hidden.bs.tooltip', menuBtnChange);
-
-  tooltipList.hide(); */
-
-/* tooltipList.forEach(tolltip => {
-      tolltip.addEventListener('hidden.bs.tooltip', menuBtnChange);
-      tooltipList.hide();
-  }); */
-
-/* var myTooltipEl = document.getElementById('myTooltip')
-  var tooltip = new bootstrap.Tooltip(myTooltipEl)
-  
-  myTooltipEl.addEventListener('hidden.bs.tooltip', function () {
-    // do something...
-  })
-  
-  tooltip.hide()
- */
-/* Enable Tooltips */
-/*  $(function () {
-      $('[data-toggle="tooltip"]').tooltip({
-        trigger: "hover",
-      });
-    
-      $('[data-toggle="tooltip"]').on("click", function () {
-        $(this).tooltip("hide");
-      });
-    });   */
-    
-   
 
 closeBtn.addEventListener("click", () => {
   sidebar.classList.toggle("show");
@@ -64,9 +30,6 @@ function menuBtnChange() {
     closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
   }
 }
-
-
-
 
  function hideTooltip() {
     console.log(tooltipTriggerList);
