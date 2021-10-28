@@ -1,5 +1,6 @@
 import { validarCampoRequerido, validarEmail } from "./validaciones.js";
 import { Usuario } from "./usuario.js";
+//import {crearFilaUsuario} from "./admin.js";
 
 let loginEmail = document.getElementById("si-email");
 let loginpassword = document.getElementById("si-password");
@@ -17,6 +18,9 @@ let adminBtn = document.getElementById("admin-btn");
 let favoritesBtn = document.getElementById("favorites-btn");
 let listTitle = document.getElementById("list-title");
 let usuarios = [];
+
+//llamo a la funcion que recupera los datos del localStorage
+cargaInicialUser();
 
 loginEmail.addEventListener("blur", () => {
   validarEmail(loginEmail);
@@ -48,8 +52,16 @@ document.addEventListener(
   false
 );
 
-//llamo a la funcion que recupera los datos del localStorage
-cargaInicialUsuario();
+// recupero los datos de usuarios del localStorage al cargar la pagina
+function cargaInicialUser() {
+  // si hay algo en el localStorage lo guardo en el arreglo sino dejo el arreglo vacio
+  usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+  // llamar a la funcion que crea filas
+  usuarios.forEach((user) => {
+    crearFilaUser(user);
+   }); 
+}
 
 function registerUser(event) {
   event.preventDefault();
@@ -79,7 +91,7 @@ function registerUser(event) {
         // limpiar el formulario
         limpiarFormulario();
         //  Dibujar FILA EN LA TABLA
-        //crearFila(nuevoUsuario);
+       // crearFilaUser(nuevoUsuario);
         //mostar un mensaje al usuario
         Swal.fire({
           icon: "success",
@@ -112,20 +124,84 @@ function limpiarFormulario() {
   userEmail.className = "form-control";
   userPassword.className = "form-control";
   userPasswordConfirm.className = "form-control";
-
-  // cambio el valor de la variable bandera
-  // usuarioExistente = false;
 }
 
-function cargaInicialUsuario() {
-  // si hay algo en el localStorage lo guardo en el arreglo sino dejo el arreglo vacio
-  usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+function crearFilaUser(user) {
+  console.log(user);
+ let tabla = document.getElementById('tablaUsuarios');
+// console.log(tabla);
+ if(tabla != null){
+  tabla.innerHTML = `<tr>
+ <th scope="row">${ user.nombre}</th>
+ <td>${ user.email}</th>
+ <td><span class="badge text-success bg-success-light">Active</span></td>
+ <td>${Math.floor((Math.random() * (10-1))+1)}</th>
+ <td>
+ <div class="btn-group" role="group" aria-label="botones de acciones">
+  <a class="btn text-danger fs-4" role="button" onclick="eliminarUsuario('${user.email}')">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="currentColor"
+      class="bi bi-trash"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"
+      />
+      <path
+        fill-rule="evenodd"
+        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+      />
+    </svg>
+  </a>
+  </div>
+</td>`;
+ }
+} 
 
-  // llamar a la funcion que crea filas
-  /*  productos.forEach((item) => {
-    crearFila(item);
-  }); */
-}
+window.eliminarUsuario = (email) => {
+  
+  Swal.fire({
+    title: "¿Esta seguro de borrar el usuario?",
+    text: "No se puede revertir este proceso posteriormente",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#4650dd",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Si, Borrar!",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+     
+      let _usuarios = usuarios.filter((user) => {
+        return user.email != email;
+      });
+     
+      usuarios = _usuarios;
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+      //Borramos la tabla
+      borrarFilasUsuario();
+      //vuelvo a dibujar la tabla
+      usuarios.forEach((user) => {
+        crearFilaUser(user);
+      });
+      //muestro el mensaje
+      Swal.fire(
+        "Producto eliminado!",
+        "El producto fue eliminado correctamente",
+        "success"
+      );
+    }
+  });
+};
+function borrarFilasUsuario() {
+   let tabla = document.querySelector("#tablaProductos");
+   if(tabla != null){
+    tabla.innerHTML = "";
+   }
+};
 
 function login(e) {
   e.preventDefault();
