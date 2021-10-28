@@ -33,12 +33,12 @@ window.addEventListener('load', function() {
 /* ----------------------------------------------------- */
 
 // declarar variables
-/* let productos = [];
+let productos = [];
 
 cargarInicial();
 
 function cargarInicial() {
-  productos = JSON.parse(localStorage.getItem("listaProductoKey")) || [];
+  productos = JSON.parse(localStorage.getItem("productos")) || [];
 
   // Si hay datos dentro del arreeglo dibujo las columnas con las cards
 
@@ -53,13 +53,40 @@ function cargarInicial() {
 function crearColumna(producto) {
   let grilla = document.querySelector("#grilla");
   console.log(producto);
-  grilla.innerHTML += `<div class="col-sm-12 col-md-4 col-lg-3 mb-5">
-    <div class="card">
-      <img src="${producto.url}" class="card-img-top" alt="${producto.nombreProducto}">
-      <div class="card-body">
-        <h5 class="card-title">${producto.nombreProducto}</h5>
-        <p class="card-text">${producto.descripcion}</p>
+  grilla.innerHTML += ` <div class="card shadow">
+  <div class="imgBx">
+      <img src="${producto.url}"
+          alt="${producto.nombre}">
+      <ul class="action">
+          <li>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <span>Añadir a lista de deseos</span>
+          </li>
+          <li>
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <span>Añadir al carrito</span>
+          </li>
+          <li>
+              <i class="fa fa-eye" aria-hidden="true"></i>
+              <span>Ver detalles</span>
+          </li>
+      </ul>
+  </div>
+  <div class="content mt-auto">
+      <div class="productName">
+          <h3>${producto.nombre}</h3>
       </div>
-    </div>
-  </div>`;
-} */
+      <div class="price_rating">
+          <h2>$${producto.precio}</h2>
+          <div class="star mt-3 align-items-center">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa grey fa-star"></i>
+          </div>
+      </div>
+  </div>
+</div>`;
+};
+

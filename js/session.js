@@ -113,18 +113,11 @@ function limpiarFormulario() {
   userPassword.className = "form-control";
   userPasswordConfirm.className = "form-control";
 
-  // cambio el valor de la variable bandera
-  // usuarioExistente = false;
 }
 
 function cargaInicialUsuario() {
   // si hay algo en el localStorage lo guardo en el arreglo sino dejo el arreglo vacio
   usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-  // llamar a la funcion que crea filas
-  /*  productos.forEach((item) => {
-    crearFila(item);
-  }); */
 }
 
 function login(e) {
