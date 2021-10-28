@@ -1,11 +1,18 @@
 # proyecto2-LuxorJoyeria
-# **Catálogo LUXOR JOYERíA**:gem:
+# **LUXOR JOYERíA**:gem:
 
 
-##  Pagina sobre catálogo de productos, tematica  joyeria:
-### Se usó html5, css3 y javascript para un sistema de registro/login, con un dashboard para CRUD de productos y usuarios*:eyeglasses:
+##  Página sobre catálogo de productos, temática  joyería:
+### Se usó html5, css3 y javascript (ECMAScript 6) para un sistema de registro/login, con un dashboard para CRUD de productos y usuarios *:eyeglasses:
 
-## **Demo**:desktop_computer:
+## **LiveDemo**:desktop_computer:
+https://luxorjoyeria.netlify.app/index.html
+
+### Para el login como usuario administrador usar: 
+email: admin@luxor.com
+password: admin123
+### En el dashboard administrador al hacer doble click en la pestaña productos del sidebar se cargan productos de prueba.
+#### Puede crear su propio ususario invitado si lo desea.
 
 ## **librerias externas**:books: 
 - *Bootstrap*
